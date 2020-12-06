@@ -1,0 +1,240 @@
+.star-wrap
+    display: flex
+    .star
+        width: 16px
+        height: 16px
+        background-image: url($images+'star-white.svg')
+        background-repeat: no-repeat
+        background-position: center
+        &:not(:last-child)
+            margin-right: 16px
+        &.active
+            background-image: url($images+'star.svg')
+
+.shadow-default
+    box-shadow: $shadow-default
+.shadow-blue
+    box-shadow: 0 5px 15px rgba($blue,.5)
+.hover-to-more
+    position: relative
+    overflow: hidden
+    .img-wrapper
+        transition : filter .5s ease
+    &:hover
+        .img-wrapper
+            filter: blur(6px)
+        .more
+            opacity: 1
+            text-decoration: none
+    .more
+        position: absolute
+        top: 0
+        width: 100%
+        left: 0
+        height: 100%
+        +flex-align(center,center)
+        flex-direction: column
+        z-index: 5
+        background: rgba($blue,.5)
+        opacity: 0
+        transition : opacity .5s ease
+        text-transform: uppercase
+        font-family: 'Roboto',serif
+        font-size: 14px
+        font-weight: bold
+        color: #fff
+        .ic-route
+            transform: rotate(45deg)
+
+.card
+    margin-bottom: $gap
+    border-top-right-radius: 80px
+    border-bottom-left-radius: 20px
+    border: 1px solid $border_color
+    &.card-price
+        border-radius: 20px 80px
+        overflow: hidden
+        .img-wrapper
+            padding-top: 90%
+        .img-overlay
+            +flex-align(center,center)
+        h1
+            letter-spacing: .05em
+        &.main
+            .img-wrapper
+                padding-top: 105%
+                h1
+                    line-height: 1
+                    position: relative
+                    &::before
+                        +psuedo
+                        +size(20px)
+                        background-image: url($images+'icons/crown.svg')
+                        background-repeat: no-repeat
+                        background-position: center
+                        background-size: contain
+                        position: absolute
+                        left: 50%
+                        bottom: 100%
+                        transform: translateX(-50%)
+
+    [data-special]
+        &::before
+            content: attr(data-special)
+            display: inline-block
+            position: absolute
+            top: 0
+            left: 0
+            font-size: 18px
+            font-weight: bold
+            padding: 12px
+            background: $primary
+            color: #fff
+            z-index: 1
+            border-bottom-right-radius: 20px
+    &.card-vertical
+        .img-wrapper
+            padding-top: (250/365)*100%
+            border-top-right-radius: 80px
+    &.card-horizontal
+        border-radius: 20px 80px
+        .img-wrapper
+            border-radius: 20px 80px
+            border-bottom-right-radius: 0px
+            padding-top: (385/365)*100%
+        &>.img-wrapper
+            border-bottom-right-radius: 20px
+        .content-wrapper
+            height: 100%
+            padding: 40px 30px 40px 0 
+            +respond-to-down(small)
+                padding: 40px 30px 
+        .title
+            margin-bottom: 35px 
+        p
+            font-size: 14px
+            line-height: 1.5
+            display: -webkit-box
+            -webkit-line-clamp: 9
+            -webkit-box-orient: vertical;
+            overflow: hidden
+    .img-overlay
+        text-align: right
+        left: 0
+        height: 50%
+        width: 100%
+        bottom: 0
+        padding: 15px
+        background: linear-gradient(180deg,rgba(#252E48,0) 0%,#001333 100%)
+        +flex-align('initial','flex-end')
+        flex-direction: column
+        line-height: 1.5
+    .img-wrapper
+        .img
+            +aspect-center
+        position: relative
+        height: 0
+        overflow: hidden
+        .img-overlay
+            position: absolute
+            img
+                width: 100%
+    .avatar
+        position: absolute
+        right: 30px
+        top: 0
+        transform: translateY(-50%)
+        overflow: hidden
+        img
+            width: 100%
+    .content-wrapper
+        padding: 30px
+        position: relative
+
+.review-card
+    background: rgba(black,.1)
+    border: 1px solid rgba(black,.3)
+    border-radius: 20px
+    position: relative
+    padding: 13px
+    +my(60px)
+    &.review-lg
+        padding: 18px
+        .content
+            padding: 40px 30px 24px 30px
+            img
+                width: 45px
+                +mx(10px)
+            img,h5
+                margin-bottom: 34px
+            &::before
+                background-size: 120px
+        .avatar,.avatar::after
+            +size(140px)
+    .content
+        border-radius: 20px
+        padding: 24px
+        position: relative
+        &::before
+            content: ''
+            background-image: url($images+'quote.svg')
+            background-repeat: no-repeat
+            background-size: 90px
+            background-position: -10px -15px
+            display: block
+            position: absolute
+            left: 0
+            top: 0
+            width: 100%
+            height: 100%
+            pointer-events: none
+            opacity: 0.1
+        img
+            width: 40px
+            +mx(10px)
+        img,h5
+            margin-bottom: 24px
+        h6
+            font-size: 21px
+        h5,h6,p
+            text-align: center
+    .avatar
+        +circle(115px)
+        position: absolute
+        left: 50%
+        top: 0
+        transform: translateX(-50%) translateY(-50%)
+        overflow: hidden
+        box-shadow: 0 3px 6px rgba(white,.16)
+        &::after
+            content: ''
+            display: inline-block
+            border: 10px solid rgba(#707070,.15)
+            top: 50%
+            left: 50%
+            +circle(115px,transparent)
+            position: absolute
+            transform: translateX(-50%) translateY(-50%)
+            z-index: 1
+        img
+            width: 100%
+    @each $color,$var in $theme-colors
+        &.#{$color}
+            background: rgba($var,.1)
+            border-color: rgba($var,.3)
+            color: get_color($var)
+            .content
+                background-color: $var
+                box-shadow: 0 0 6px $var
+
+
+.avatar
+    +circle(45px)
+    border: 1px solid rgba(black,.55)
+    overflow: hidden
+    flex: 0 0 45px
+    &.avatar-lg
+        +circle(75px)
+        flex: 0 0 75px
+    img
+        width: 100%

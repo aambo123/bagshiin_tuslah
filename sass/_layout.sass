@@ -1,0 +1,56 @@
+.container
+    +container
+
+.row
+    display : flex
+    flex-wrap : wrap
+    +mx(-$gap/2)
+    
+[class^="col-"]
+    position: relative
+    width: 100%
+    +px($gap/2)
+
+.col-auto
+    flex: 0 0 auto
+    width: auto
+    max-width: 100%
+
+.col
+    +px($gap/2)
+    -ms-flex-preferred-size: 0
+    flex-basis: 0
+    -ms-flex-positive: 1
+    flex-grow: 1
+    max-width: 100%
+    
+$col_size: 'sm' small,'md' medium,'lg' large
+
+@each $size,$breakpoint in $col_size
+    @for $i from 12 to 0
+        +respond-to($breakpoint)
+            .col-#{$size}-#{$i}
+                flex : 0 0 (100%/12 * $i)
+                max-width : 100%/12 * $i
+
+@for $i from 12 to 0
+    .col-#{$i}
+        flex : 0 0 (100%/12 * $i)
+        max-width : 100%/12 * $i
+
+
+
+$flex-aligns: 'center' center,'end' flex-end,'start' flex-start
+
+@each $al,$value in $flex-aligns
+    .align-#{$al}
+        align-items: $value
+    .justify-#{$al}
+        justify-content: $value
+.justify-between
+    justify-content: space-between
+.justify-around
+    justify-content: space-around
+     
+.flex
+    display : flex

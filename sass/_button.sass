@@ -1,0 +1,68 @@
+.btn
+    text-shadow: none
+    display: inline-block
+    text-decoration: none
+    +px(28px)
+    +py(14px)
+    line-height : 1
+    border: none
+    font-weight: 400
+    text-align : center
+    font-size: 16px
+    font-weight: 500
+    border-radius: 5rem
+    box-shadow: $shadow-default
+    background: #fff
+    cursor: pointer
+    min-width: 120px
+    +transition-default
+    &:hover
+        transform: translateY(-2px)
+    &:active
+        transform: translateY(0px)
+    &.btn-sm
+        padding: 10px
+        font-size: 12px
+    &.btn-select
+        display: inline-flex
+        align-items: center
+        span
+            +mx(6px)
+    .btn-link
+        display: inline-flex
+        align-items: center
+@each $color,$left,$right in $button-gradient
+    &.btn-#{$color}
+        background: linear-gradient(90deg, $left 0%, $right 100%);
+        color: get_color($right)
+        box-shadow: 0 3px 6px $right
+
+.btn-icon
+    text-shadow: none
+    text-decoration: none
+    line-height : 1
+    border: none
+    font-weight: 400
+    text-align : center
+    font-size: 16px
+    font-weight: 500
+    border-radius: 5rem
+    cursor: pointer
+    +size(45px)
+    +transition-default
+    +flex-align(center,center,inline-flex)
+    position: relative
+    &+.btn-icon
+        margin-left: 10px
+    &.notify
+        &::after
+            +psuedo    
+            +circle(10px,$orange)
+            position: absolute
+            right: 0
+            top: 0
+    .ic
+        +size(30px)
+        &::before
+            +size(20px)
+         

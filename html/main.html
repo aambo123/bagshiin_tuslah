@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/sass/style.css">
+    <link rel="stylesheet" href="/font/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto&display=swap"
+        rel="stylesheet">
+</head>
+
+<body style="">
+    <header>
+        <nav class="nav" id="nav">
+            <div class="nav-top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <a href="/html/main.html" class="brand">
+                                <img src="/images/logo-white.png" alt="" class="logo-white">
+                                <img src="/images/logo-green.png" alt="" class="logо">
+                            </a>
+                        </div>
+                        <div class="col text-right">
+                            <div class="lang-select">
+                                <button class="btn btn-sm btn-select text-orange">
+                                    <img src="/images/flag-eng.svg" alt="">
+                                    <span>ENGLISH</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" viewBox="0 0 12.111 6.106">
+                                        <path fill="currentColor"
+                                            d="M123.719,5.723,118.49.137a.418.418,0,0,0-.62,0,.493.493,0,0,0,0,.664l4.918,5.254-4.918,5.254a.493.493,0,0,0,0,.664.418.418,0,0,0,.62,0l5.229-5.586a.493.493,0,0,0,0-.665Z"
+                                            transform="translate(12.111 -117.742) rotate(90)" />
+                                    </svg>
+                                </button>
+                                <ul class="">
+                                    <li>
+                                        <img src="/images/flag-eng.svg" alt="">
+                                        ENGLISH
+                                    </li>
+                                    <li>
+                                        <img src="/images/flag-eng.svg" alt="">
+                                        ENGLISH
+                                    </li>
+                                    <li>
+                                        <img src="/images/flag-eng.svg" alt="">
+                                        ENGLISH
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-bot">
+                <div class="container">
+                    <div class="row align-center">
+                        <div class="col-auto">
+                            <a href="" class="menu-btn" onclick="toggleMenu()">
+                                <span></span>
+                                Menu
+                            </a>
+                        </div>
+                        <div class="col">
+                            <div class="nav-wrapper">
+                                <ul class="nav-list nav-horizontal">
+                                    <li class="nav-item">
+                                        <a href="" class="nav-link">Бидний тухай</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="" class="nav-link">Хичээл үзэх</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="" class="nav-link">Багш нар</a>
+                                    </li>
+                                </ul>
+                                <!-- <div class="login">
+                                    <a href="" class="nav-link text-orange">Нэвтрэх</a>
+                                    <a href="" class="btn btn-orange ml-6">Бүртгүүлэх</a>
+                                </div> -->
+                                <ul class="nav-list nav-horizontal login">
+                                    <li class="nav-item dropdown">
+                                        <a href="" class="nav-link text-orange" data-toggle="dropdown"
+                                            data-target="#myClass">Миний хичээлүүд</a>
+                                        <div class="dropdown-menu" id="myClass">
+                                            <div class="dropdown-header">
+                                                Сүүлд үзсэн хичээлүүд
+                                            </div>
+                                            <div class="dropdown-body">
+                                                <ul class="dropdown-list" id="dropWrap">
+                                                    <li class="dropdown-item" id="dropItem">
+                                                        <div class="img-wrap">
+                                                            <img src="/images/Screenshot-2020-04-15-at-16.19.55-b29c.jpg"
+                                                                alt="">
+                                                        </div>
+                                                        <div class="content-wrap">
+                                                            <h6>
+                                                                <a href="">
+                                                                    “JUMP” солонгос хэлний
+                                                                    сургалтын төвийн захирал
+                                                                    Нэг мөр байж болно
+                                                                </a>
+                                                            </h6>
+                                                            <progress value="32" max="100"> </progress>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="dropdown-footer">
+                                                <a href="">Бүх хичээл харах</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="nav-item dropdown mr-2">
+                                        <a href="" class="btn-icon notify" data-toggle="dropdown" data-target="#notify">
+                                            <i class="ic ic-bell gr-blue"></i>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-sm" id="notify">
+                                            <div class="dropdown-header">
+                                                Сануулга
+                                            </div>
+                                            <div class="dropdown-body">
+                                                <ul class="dropdown-list" id="dropWrap2">
+                                                    <li class="dropdown-item new" id="dropItem2">
+                                                        <div class="img-wrap">
+                                                            <img src="/images/Screenshot-2020-04-15-at-16.19.55-b29c.jpg"
+                                                                alt="">
+                                                        </div>
+                                                        <div class="content-wrap">
+                                                            <h6>
+                                                                <a href="">
+                                                                    “JUMP” солонгос хэлний
+                                                                    сургалтын төвийн захирал
+                                                                    Нэг мөр байж болно
+                                                                </a>
+                                                            </h6>
+                                                            <p class="text-muted">11 цагийн өмнө</p>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="dropdown-footer">
+                                                <a href="">Бүх хичээл харах</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                        <a href="" class="btn-icon notify" data-toggle="dropdown" data-target="#myProfile">
+                                            <span class="avatar">
+                                                <img src="/images/avatar.jpg" alt="">
+                                            </span>
+                                        </a>
+                                        <div class="dropdown-menu" id="myProfile">
+                                            <div class="dropdown-header">
+                                                <div class="flex align-center">
+                                                    <span class="avatar avatar-lg mr-2">
+                                                        <img src="/images/avatar.jpg" alt="">
+                                                    </span>
+                                                    <div>
+                                                        <h4 class="mb-1">
+                                                            Баатарбаяр <br>Оюун-эрдэнэ
+                                                        </h4>
+                                                        <p class="text-muted text-sm">
+                                                            24-р сургуулийн 8б ангийн сурагч
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="dropdown-body">
+                                                <ul class="profile-list">
+                                                    <li class="profile-item" >
+                                                        <a href="">Миний хичээлүүд <i class="icon-settings-1"></i></a>
+                                                        <a href="">Таалагдсан хичээлүүд <i class="icon-settings-1"></i></a>
+                                                        <a href="">Таалагдсан хичээлүүд <i class="icon-settings-1"></i></a>
+                                                    </li>
+                                                    <li class="profile-item" >
+                                                        <a href="">Хэрэглэгчийн тухай <i class="icon-settings-1"></i></a>
+                                                        <a href="">Хэрэглэгчийн тухай <i class="icon-settings-1"></i></a>
+                                                        <a href="">Хэрэглэгчийн тухай <i class="icon-settings-1"></i></a>
+                                                        <a href="">Хэрэглэгчийн тухай <i class="icon-settings-1"></i></a>
+                                                    </li>
+                                                    <li class="profile-item" >
+                                                        <a href="">Хэрэглэгчийн тухай <i class="icon-settings-1"></i></a>
+                                                        <a href="">Хэрэглэгчийн тухай <i class="icon-settings-1"></i></a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="dropdown-footer">
+                                                <a href="">Бүх хичээл харах</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-wrapper">
+                    <ul class="menu-list">
+                        <li class="menu-item">
+                            <a href="" class="menu-link">Menu1</a>
+                            <a class="menu-detail">
+                                <div class="img-wrapper">
+                                    <img src="/images/Screenshot-2020-04-15-at-16.19.55-b29c.jpg" alt="">
+                                </div>
+                                <div class="content-wrapper">
+                                    <p>
+                                        Contact us via Email or Phone
+                                        with your Tutoring needs and
+                                        we match the most suitably
+                                        qualifed tutors for a Free 30
+                                        Mins demo...
+                                    </p>
+                                    <ul class="star-wrap mt-4">
+                                        <li class="star active"></li>
+                                        <li class="star active"></li>
+                                        <li class="star active"></li>
+                                        <li class="star active"></li>
+                                        <li class="star"></li>
+                                    </ul>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="" class="menu-link">Menu1</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="" class="menu-link">Menu1</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="" class="menu-link">Menu1</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="" class="menu-link">Menu1</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section class="section-1">
+        <div class="container text-right">
+            <div class="row justify-end">
+                <div class="col-sm-6">
+                    <h1 class="heading-1 fw-400 text-green">
+                        Хүүхэд <span class="fw-600">Бүрт</span>
+                        <br>
+                        Тэгш <span class="fw-600">Боломж.</span>
+                    </h1>
+                    <h5 class="heading-5 fw-400 my-4">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the industry’s standard dummy text ever since the 1500s,
+                    </h5>
+                    <div class="input-group green">
+                        <input type="search" name="search" placeholder="What do you want to learn?"
+                            class="form-control">
+                        <button class="btn btn-green">Хайх</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="" class="scroll-down">
+            <img src="/images/arrow-down.svg" alt="">
+        </a>
+    </section>
+
+    <section>
+        <div class="section-header text-center header-dark-green">
+            <span class="icon-box shadow-dark-green">
+                <i class="ic ic-cloud gr-dark-green"></i>
+            </span>
+            <h1 class="heading-1">
+                <span class="mx-5">Үнэлгээ сайтай хичээлүүд</span>
+            </h1>
+        </div>
+        <div class="container">
+            <div class="row" id="loopRow">
+                <div class="col-sm-4" id="loopCol">
+                    <div class="card shadow-default card-vertical">
+                        <div class="img-wrapper">
+                            <img class="img" src="/images/Screenshot-2020-04-15-at-16.19.55-b29c.jpg" alt="">
+                        </div>
+                        <div class="content-wrapper">
+                            <div class="avatar">
+                                <img src="/images/avatar.jpg" alt="">
+                            </div>
+                            <p class="fw-600 line-2">
+                                <a href="">
+                                    Хичээлийн ног энд байрлана хоёр
+                                    мөр Dайж болно түүнээс дээр …
+                                </a>
+                            </p>
+                            <div class="flex justify-between">
+                                <ul class="star-wrap">
+                                    <li class="star active"></li>
+                                    <li class="star active"></li>
+                                    <li class="star active"></li>
+                                    <li class="star active"></li>
+                                    <li class="star"></li>
+                                </ul>
+                                <small class="date text-sm text-muted">2цаг 30минут</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section-about">
+        <div class="section-header text-center header-green">
+            <span class="icon-box shadow-green">
+                <i class="ic ic-cloud gr-green"></i>
+            </span>
+            <h1 class="heading-1">
+                <span class="mx-5">Танин мэдэхүй, Мэдээ мэдээлэл</span>
+            </h1>
+        </div>
+        <div class="container">
+            <div class="row align-center">
+                <div class="col-sm-6 image-con">
+                    <img src="/images/about_1.svg" alt="">
+                </div>
+                <div class="col-sm-6 content">
+                    <h1 class="fw-400 mb-2">Эхлээд: <span class="fw-700 text-green">Бүртгүүлэх</span></h1>
+                    <p class="fw-400 text-muted heading-5">
+                        Contact us via Email or Phone with your
+                        Tutoring needs and we match the most
+                        suitably qualifed tutors for a Free 30
+                        Mins demo...
+                    </p>
+                </div>
+            </div>
+            <div class="row align-center">
+                <div class="col-sm-6 content text-right">
+                    <h1 class="fw-400 mb-2">Хичээл: <span class="fw-700 text-green">төлөвлөх</span></h1>
+                    <p class="fw-400 text-muted heading-5 ">
+                        Contact us via Email or Phone with your
+                        Tutoring needs and we match the most
+                        suitably qualifed tutors for a Free 30
+                        Mins demo...
+                    </p>
+                </div>
+                <div class="col-sm-6 image-con">
+                    <img src="/images/about_2.svg" alt="">
+                </div>
+            </div>
+            <div class="row align-center">
+                <div class="col-sm-6 image-con">
+                    <img src="/images/about_3.svg" alt="">
+                </div>
+                <div class="col-sm-6 content">
+                    <h1 class="fw-400 mb-2">Мэдлэгээ: <span class="fw-700 text-green">дээшлүүл</span></h1>
+                    <p class="fw-400 text-muted heading-5">
+                        If you happy to go ahead with the
+                        your selected tutor, we will make the
+                        booking for you at a mutually
+                        convenient time..
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="section-header text-center header-orange">
+            <span class="icon-box shadow-orange">
+                <i class="ic ic-cloud gr-orange"></i>
+            </span>
+            <h1 class="heading-1">
+                <span class="mx-5">Танин мэдэхүй, Мэдээ мэдээлэл</span>
+            </h1>
+        </div>
+        <div class="container">
+            <div class="row" id="loopDiv">
+                <div class="col-sm-8">
+                    <div class="card card-horizontal">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="img-wrapper shadow-blue" data-special="Оцлох мэдээ">
+                                    <img class="img" src="/images/card-img.jpg" alt="">
+                                    <div class="img-overlay text-white ">
+                                        <p>
+                                            <a href="" class="btn-link mr-1">
+                                                <i class="icon-message-2"></i>
+                                                <span class="text-sm ml-btn1 fw-500">30 сэтгэгдэл</span>
+                                            </a>
+                                            <span class="badge badge-blue">ТӨРӨЛ</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="content-wrapper">
+                                    <h5 class="title fw-700 text-blue line-3">
+                                        <a href="">
+                                            Хичээлийн ног энд байрлана хоёр
+                                            мөр Dайж болно түүнээс дээр …
+                                        </a>
+                                    </h5>
+                                    <p>
+                                        Өнөөдрийн хуралдаанаар өндөржүүлсэн бэлэн байдлыг хэсэгчилсэн зэргийг 12-р сарын
+                                        31-нийг дуустал сунгах шийдвэр гаргасан хэдий ч шинэ жилийн баяр ёслолыг
+                                        тэмдэглэхгүй байх талаар шийдвэр гаргаагүй гэдгийг Шадар сайд Я.Содбаатар
+                                        хэллээ.
+                                        <br>
+                                        Өнгөрсөн наймдугаар сараас эхлэн бизнесийн үйл ажиллагааг дэмжих зорилгоор зарим
+                                        төрлийн үйл ажиллагаа тэр дундаа олон нийтийн арга хэмжээ, урлаг соёлын арга
+                                        хэмжээг нээх шийдвэрийг гаргасан.
+                                        <br>
+                                        Өөрөөр хэлбэл, одоогоор урлаг соёл, олон нийтийн үйл ажиллагааг зохион байгуулах
+                                        боломжтой байгаа юм. Гэвч нөхцөл байдал амаргүй байгаа тул шинэ жилийн арга
+                                        хэмжээг зохион байгуулахгүй байх шийдвэр гарч болзошгүй гэдгийг УОК-ын дарга
+                                        хэлсэн юм. Гэхдээ шийдвэрийг орон нутгийн онцгой комисс гаргах юм байна.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4" id="loopNews">
+                    <div class="card card-horizontal hover-to-more shadow-blue">
+                        <div class="img-wrapper">
+                            <img class="img" src="/images/card-img.jpg" alt="">
+                            <div class="img-overlay text-white ">
+                                <div>
+                                    <span class="badge badge-green">ТӨРӨЛ</span>
+                                </div>
+                                <h6 class="my-1">
+                                    Хаадын тоглоомыг хамгийн
+                                    өвөрмөцөөр үзлээ
+                                </h6>
+                                <p>
+                                    <a href="" class="btn-link mr-1">
+                                        <i class="icon-message-2"></i>
+                                        <span class="text-sm ml-btn1 fw-500">30 сэтгэгдэл</span>
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                        <a href="" class="more">
+                            <span class="icon-box shadow-blue icon-sm mb-2">
+                                <i class="ic ic-route gr-blue"></i>
+                            </span>
+                            ДЭлгэрэнгүй
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="section-header text-center header-blue">
+            <span class="icon-box shadow-blue">
+                <i class="ic ic-cloud gr-blue"></i>
+            </span>
+            <h1 class="heading-1">
+                <span class="mx-5">Танин мэдэхүй, Мэдээ мэдээлэл</span>
+            </h1>
+        </div>
+        <div class="container">
+            <div class="row align-center">
+                <div class="col-sm-4">
+                    <div class="card card-price">
+                        <div class="img-wrapper">
+                            <img class="img" src="/images/card-img.jpg" alt="">
+                            <div class="img-overlay text-white ">
+                                <h1>1 сар</h1>
+                                <p>30'000 төгрөг</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card card-price main">
+                        <div class="img-wrapper">
+                            <img class="img" src="/images/card-img.jpg" alt="">
+                            <div class="img-overlay text-white ">
+                                <h1>1 сар</h1>
+                                <p>30'000 төгрөг</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card card-price">
+                        <div class="img-wrapper">
+                            <img class="img" src="/images/card-img.jpg" alt="">
+                            <div class="img-overlay text-white ">
+                                <h1>1 сар</h1>
+                                <p>30'000 төгрөг</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row align-center justify-center">
+                <div class="col-sm-4">
+                    <div class="card card-price">
+                        <div class="img-wrapper">
+                            <img class="img" src="/images/card-img.jpg" alt="">
+                            <div class="img-overlay text-white ">
+                                <h1>1 сар</h1>
+                                <p>30'000 төгрөг</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card card-price">
+                        <div class="img-wrapper">
+                            <img class="img" src="/images/card-img.jpg" alt="">
+                            <div class="img-overlay text-white ">
+                                <h1>1 сар</h1>
+                                <p>30'000 төгрөг</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="section-review">
+        <div class="container">
+            <h1 class="fw-400 header">
+                Сурагчдын үлдээсэн <br>
+                сэтгэгдлүүд
+            </h1>
+        </div>
+        <div class="container">
+            <div class="row align-end">
+                <div class="col-sm-6">
+                    <div class="review-card orange">
+                        <div class="content">
+                            <img src="/images/quote.svg" alt="">
+                            <h5 class="fw-400">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+                                eirmod tempor.</h5>
+                            <h6>Э. Батжаргал</h6>
+                            <p class="text-sm text-muted">24-р ангын сурагч</p>
+                        </div>
+                        <div class="avatar">
+                            <img src="/images/avatar.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="review-card green review-lg">
+                        <div class="content">
+                            <img src="/images/quote.svg" alt="">
+                            <h5 class="fw-400">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+                                eirmod tempor.</h5>
+                            <h6>Э. Батжаргал</h6>
+                            <p class="text-sm text-muted">24-р ангын сурагч</p>
+                        </div>
+                        <div class="avatar">
+                            <img src="/images/avatar.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="section-app">
+        <div class="container">
+            <div class="wrapper">
+                <div class="content">
+                    <h1 class="fw-400 header">
+                        Апликейшнаа амархан <br>
+                        татаад суулгаарай
+                    </h1>
+                    <p>
+                        But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain
+                        was born and I will give you a complete account of the system, and expound the actual teachings
+                        of the great explorer of the truth.
+                    </p>
+                    <h5>
+                        Апликейшн татах уу ?
+                        <span class="buttons">
+                            <a href="" class="">
+                                <img src="/images/google.png" alt="">
+                            </a>
+                            <a href="" class="">
+                                <img src="/images/apple.png" alt="">
+                            </a>
+                        </span>
+                    </h5>
+                </div>
+                <img src="/images/Screen.png" alt="" class="screen">
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <h5 class="mb-4">Newsletter</h5>
+                        <div class="input-group orange">
+                            <input type="email" class="form-control" name="" id="" placeholder="Email">
+                            <button class="btn btn-orange">Илгээх</button>
+                        </div>
+                        <div class="mt-6">
+                            <a href="" class="mr-6">
+                                <img src="/images/facebook.svg" alt="">
+                            </a>
+                            <a href="" class="mr-6">
+                                <img src="/images/instagram.svg" alt="">
+                            </a>
+                            <a href="" class="mr-6">
+                                <img src="/images/linkedin.svg" alt="">
+                            </a>
+                            <a href="">
+                                <img src="/images/twitter.svg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-sm-8">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <ul class="nav-list">
+                                    <li class="nav-item">
+                                        <h5>Quick links</h5>
+                                    </li>
+                                    <li class="nav-item"><a href="" class="nav-link">Бидний тухай</a></li>
+                                    <li class="nav-item"><a href="" class="nav-link">Нийтлэг асуултууд</a></li>
+                                    <li class="nav-item"><a href="" class="nav-link">Багш нар</a></li>
+                                    <li class="nav-item"><a href="" class="nav-link">Мэдээ мэдээлэл</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-4">
+                                <ul class="nav-list">
+                                    <li class="nav-item">
+                                        <h5>&nbsp;</h5>
+                                    </li>
+                                    <li class="nav-item"><a href="" class="nav-link">Блог</a></li>
+                                    <li class="nav-item"><a href="" class="nav-link">Мэдүүштэй зөвөлгөө</a></li>
+                                    <li class="nav-item"><a href="" class="nav-link">Ажлын байр</a></li>
+                                    <li class="nav-item"><a href="" class="nav-link">Холбоо барих</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-4">
+                                <ul class="nav-list">
+                                    <li class="nav-item">
+                                        <h5>How it works?</h5>
+                                    </li>
+                                    <li class="nav-item"><a href="" class="nav-link">Create account</a></li>
+                                    <li class="nav-item"><a href="" class="nav-link">Online payment</a></li>
+                                    <li class="nav-item"><a href="" class="nav-link">Courses</a></li>
+                                    <li class="nav-item"><a href="" class="nav-link">Tutor</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bot">
+            <div class="container">
+                © Copyright Secure. All rights reserved to Bagshiin Tuslah.
+            </div>
+        </div>
+    </footer>
+</body>
+<script>
+    duplicate('loopRow', 'loopCol', 2)
+    duplicate('loopDiv', 'loopNews', 3)
+    duplicate('dropWrap', 'dropItem', 3)
+
+
+    function duplicate(a, b, c) {
+        var object = document.getElementById(a);
+        var target = document.getElementById(b);
+        for (let i = 0; i < c; i++) {
+            var cln = target.cloneNode(true);
+            object.appendChild(cln);
+        }
+    }
+
+    var scrollPosition = window.scrollY;
+    var nav = document.getElementById('nav');
+
+    window.addEventListener('scroll', ()=>{
+        scrollPosition = window.scrollY;
+
+        if (scrollPosition >= 100) {
+            nav.classList.add('colored');
+        } else {
+            nav.classList.remove('colored');
+        }
+    });
+
+    function toggleMenu() {
+        event.preventDefault();
+        nav.classList.toggle('open')
+    }
+
+    var dropDownButton = document.querySelectorAll('[data-toggle=dropdown]');
+    
+    Object.keys(dropDownButton).forEach.call(dropDownButton, (key,i) =>{
+        dropDownButton[i].addEventListener('click', (event) =>{
+            event.preventDefault();
+            var trgt = event.currentTarget.dataset.target;
+            var object = document.querySelector(trgt);
+            
+            object.classList.toggle('open')
+
+        })
+    })
+</script>
+
+</html>

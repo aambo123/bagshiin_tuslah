@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="92.704" height="92.704" viewBox="0 0 92.704 92.704">
+  <defs>
+    <style>
+      .cls-1, .cls-3 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-3 {
+        fill-rule: evenodd;
+        opacity: 0.9;
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="0.919" y1="1" x2="0.361" y2="0.333" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#86adfd"/>
+      <stop offset="1" stop-color="#8fb4ff"/>
+    </linearGradient>
+  </defs>
+  <g id="m_icon_2" transform="translate(444.002 -618)">
+    <ellipse id="Ellipse_16" data-name="Ellipse 16" class="cls-1" cx="46.352" cy="46.352" rx="46.352" ry="46.352" transform="translate(-444.002 618)"/>
+    <ellipse id="Ellipse_17" data-name="Ellipse 17" class="cls-2" cx="32.781" cy="32.781" rx="32.781" ry="32.781" transform="translate(-430.43 631.572)"/>
+    <path id="cloud-1" class="cls-3" d="M25,9A16.005,16.005,0,0,1,40.432,20.761,10.5,10.5,0,0,1,36.5,41H16a13,13,0,0,1-3.959-25.386A15.978,15.978,0,0,1,25,9ZM15,19a8,8,0,0,0-8,8,2,2,0,0,0,4,0,4,4,0,0,1,4-4,2,2,0,0,0,0-4Z" transform="translate(-422 637)"/>
+  </g>
+</svg>

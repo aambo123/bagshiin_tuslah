@@ -1,0 +1,32 @@
+
+
+.icon-box
+    +circle(93px)
+    +flex-align('center','center',inline-flex)
+    &.icon-sm
+        +size(55px)
+        .ic
+            +size(38px)
+            &::before
+                +size(25px)
+    @each $var,$start,$end in $icon-gradients
+        &.shadow-#{$var}
+            box-shadow: 0 40px 95px rgba($end,.3)
+.ic
+    +circle(65px)
+    +flex-align('center','center')
+    &::before
+        content: ''
+        display: inline-block
+        +size(44px)
+        background-repeat: no-repeat
+        background-position: center
+        background-size: contain
+    @each $icon in $icon-list
+        &.ic-#{$icon}
+            &::before
+                background-image: url($images+'icons/#{$icon}.svg')
+                
+    @each $var,$start,$end in $icon-gradients
+        &.gr-#{$var}
+            background: linear-gradient(135deg, $start 0%, $end 100%)

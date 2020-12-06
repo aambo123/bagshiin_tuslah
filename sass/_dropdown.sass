@@ -1,0 +1,55 @@
+.dropdown
+    position: relative
+.dropdown-menu
+    position: absolute
+    top: calc( 100% + 10px )
+    right: 0
+    width: auto
+    border-radius: 20px 40px
+    box-shadow: $shadow-default
+    border: 1px solid $border-color
+    min-width: 300px
+    z-index: 10
+    background: white
+    font-size: 12px
+    display: none
+    &.open
+        display: block
+    &.dropdown-sm
+        min-width: 260px
+        .dropdown-item
+            .content-wrap
+                flex: 0 0 120px
+                max-width: 120px
+                h6
+                    display: -webkit-box
+                    -webkit-line-clamp: 3
+                    -webkit-box-orient: vertical
+                    overflow: hidden
+    .dropdown-header,.dropdown-footer
+        padding: 10px 15px 
+    .dropdown-header
+        font-size: 16px
+        font-weight: 600
+        color: #15354B
+        line-height: 1
+        h4
+            font-size: 16px
+    .dropdown-body
+        border-bottom: 1px solid $border-color
+        border-top: 1px solid $border-color
+    .dropdown-footer
+        a
+            font-weight: 600
+            +flex-align(center,flex-end)
+            position: relative
+            &:hover
+                &::before
+                    width: 30px
+            &::before
+                +psuedo
+                height: 2px
+                width: 0px
+                +transition-default
+                background: $primary
+                margin-right: 5px

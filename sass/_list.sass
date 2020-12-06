@@ -1,0 +1,62 @@
+.dropdown-list
+    overflow: auto
+    max-height: (75px*3)
+    &::-webkit-scrollbar
+        width: 0
+    .dropdown-item
+        padding: 10px 15px 
+        height: 55px
+        display: flex
+        box-sizing: content-box
+        align-items: center
+        &:not(:last-child)
+            border-bottom: 1px solid $border-color
+        .img-wrap
+            height: 100%
+            flex: 0 0 78px
+            max-width: 78px
+            position: relative
+            border-radius: 7px
+            overflow: hidden
+            margin-right: 10px
+            img
+                +aspect-center
+                
+        .content-wrap
+            h6
+                font-size: 12px
+                font-weight: 600
+                line-height: 1
+                margin-bottom: 5px
+        &.new
+            position: relative
+            &::after
+                +psuedo
+                margin-left: auto
+                +circle(10px,$orange)
+
+.profile-list
+    display: flex
+    flex-direction: column
+    .profile-item
+        text-align: right
+        padding: 10px
+        border-bottom: 1px solid $border-color
+        a
+            +py(5px)
+            display: flex
+            align-items: center
+            justify-content: flex-end
+            position: relative
+            i
+                margin-left: 10px
+            &:hover
+                &::before
+                    width: 30px
+            &::before
+                +psuedo
+                height: 2px
+                width: 0px
+                +transition-default
+                background: $orange
+                margin-right: 5px

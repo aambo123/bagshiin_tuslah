@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #80e0dd;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="rss" class="cls-1" d="M10,6H40a4,4,0,0,1,4,4V34A10,10,0,0,1,34,44H16A10,10,0,0,1,6,34V10a4,4,0,0,1,4-4Zm6,32a4,4,0,1,0-4-4A4,4,0,0,0,16,38Zm22-2A24,24,0,0,0,14,12a2,2,0,0,0,0,4A20,20,0,0,1,34,36a2,2,0,0,0,4,0Zm-9,0A15,15,0,0,0,14,21a2,2,0,0,0,0,4A11,11,0,0,1,25,36a2,2,0,0,0,4,0Z" transform="translate(-6 -6)"/>
+</svg>

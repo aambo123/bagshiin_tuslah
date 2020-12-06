@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="41.999" height="38" viewBox="0 0 41.999 38">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #80e0dd;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="cards" class="cls-1" d="M6.006,20H43.994a2,2,0,0,1,1.946,2.485l-3.495,13.94A10.023,10.023,0,0,1,32.715,44H17.285a10.023,10.023,0,0,1-9.73-7.575l-3.5-13.94A2,2,0,0,1,6.006,20ZM15,6H35a2,2,0,0,1,0,4H15a2,2,0,0,1,0-4Zm-4,7H39a2,2,0,0,1,0,4H11a2,2,0,0,1,0-4Z" transform="translate(-4 -6)"/>
+</svg>

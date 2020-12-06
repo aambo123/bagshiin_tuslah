@@ -1,0 +1,202 @@
+input[type="checkbox"],input[type="radio"]
+    &.custom
+        display: none
+        &:checked
+            &+span
+                &::after
+                    content: ''
+                    display: inline-block
+                    position: absolute
+                &::before
+                    border-color: $primary
+        &+span
+            position: relative
+            display: flex
+            align-items: center
+            padding-left: 23px
+            font-weight: 200
+            font-size : 14px
+            cursor : pointer
+            &::before
+                position: absolute
+                top: 50%
+                transform: translateY(-50%)
+                left: 0
+                content: ''
+                display: inline-block
+                width: 16px
+                height: 16px
+                border: $border_color
+                vertical-align: middle
+input[type="checkbox"].custom
+    &+span
+        &::after
+            width: 10px
+            height: 6px
+            border-bottom: 2px solid $primary
+            border-left: 2px solid $primary
+            left: 3px
+            top: 50%
+            transform: translateY(calc(-50% - 2px)) rotate(-45deg)
+
+input[type="radio"].custom
+    &+span
+        &::before
+            border-radius: 3rem
+        &::after
+            width: 8px
+            height: 8px
+            border: none
+            left: 4px
+            top: 50%
+            transform: translateY(-50%) rotate(-45deg)
+            background : $primary
+            border-radius: 3rem
+
+.input-group
+    position: relative
+    display: flex
+    width: 100%
+    flex-wrap: wrap
+    align-items: stretch
+    border-radius: 5rem
+    align-items: center
+    padding: 5px
+    .form-control
+        border: 0
+        flex: 1 1
+    @each $color,$left,$right in $button-gradient
+        &.#{$color}
+            border: 1px solid $right
+.form-control
+    border: 1px solid $border_color
+    display: inline-block
+    padding: 14px 28px
+    width: 100%
+    font-weight: 200
+    font-size: 16px
+    background: transparent
+    height: calc( 3em - 3px )
+    border-radius: 5rem
+    &.medium
+        flex: 0 1 200px
+        max-width: 200px
+    &.small
+        flex: 0 1 150px
+        max-width: 150px
+        
+    &:disabled
+        background : $disabled
+    &.onlyNumber
+        &::placeholder
+            text-align : right
+
+
+.file_group
+    display: flex
+    width: 100%
+    font-weight: 200
+    font-size: 14px
+    background: #fff
+    height: 31px
+    flex: 0 1 300px
+    max-width: 300px
+    position: relative
+    input[type="file"]
+        position : absolute
+        top : 0
+        bottom : 0
+        left : 0
+        width : 100%
+        opacity : 0
+        z-index : 1
+    span
+        border: $border_color
+        border-right: 0
+        flex: auto
+        line-height : 31px
+        +px(10px)
+        overflow : hidden
+        text-overflow: ellipsis
+    &::after
+        content: "파일선택"
+        display : flex
+        height : 31px
+        line-height : 31px
+        font-size : 14px
+        font-weight : 300
+        color : #fff
+        background : #535353
+        padding : 0 10px
+        min-width: 70px
+
+
+textarea.form_control
+    height : auto
+    width : 100%
+    flex: 0 0 100%
+    max-width : 100%
+
+
+.custom_select
+    position: relative
+    flex: 0 1 200px
+    max-width: 200px
+    .selected
+        border: $border_color
+        display: inline-block
+        padding: 0 15px
+        width: 100%
+        font-weight: 200
+        font-size: 14px
+        background: #fff
+        height: calc( 2em + 3px )
+        line-height : calc( 2em + 3px )
+        color : #616161
+    &::after
+        +psuedo
+        position : absolute
+        top : 50%
+        right : 15px
+        width : 0
+        height : 0
+        border-style : solid
+        border-width : 5px 5px 0 5px
+        border-color : #616161 transparent transparent transparent
+        transform: translateY(-50%)
+    ul
+        display: none
+        position: absolute
+        width : 100%
+        bottom : 0
+        left : 0
+        transform: translateY(100%)
+        border-left : $border_color
+        z-index : 1
+        li
+            +border(('right','bottom'),1px,$border-color)
+            background : white
+            label
+                padding : 5px 15px
+                cursor : default
+                position : relative
+                input
+                    position : absolute
+                    opacity : 0
+                span
+                    font-size : 14px
+                    font-weight : 300
+                    color : #616161
+
+
+progress
+    height: 10px
+    border-radius: 10px
+    border: 1px solid $orange
+    background: white
+    width: 100%
+    overflow: hidden
+    &::-webkit-progress-bar
+        background: white
+    &::-webkit-progress-value
+        background: $orange

@@ -1,0 +1,237 @@
+.nav
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    z-index: $nav-index
+    img
+        &.logо
+            display: none   
+        &.logo-white
+            display: block
+    &.colored
+        background: linear-gradient(90deg, #42826A 0%, #EF7F65 100%)
+        .nav-top,.nav-bot
+            background: white
+        .nav-bot
+            margin-bottom: 1px
+        img
+            &.logо
+                display: block
+            &.logo-white
+                display: none
+        .nav-bot
+            .menu-btn
+                color: $primary
+                span,span::before,span::after
+                    background: $primary
+    &.open
+        background: linear-gradient(90deg, #42826A 0%, #EF7F65 100%)
+        .nav-top,.nav-bot
+            background: white
+        .nav-bot
+            margin-bottom: 1px
+        img
+            &.logо
+                display: block
+            &.logo-white
+                display: none
+        .nav-bot
+            .menu-btn
+                color: $primary
+                span,span::before,span::after
+                    background: $primary
+                span
+                    background: transparent
+                    box-shadow: none
+                span::after
+                    bottom: calc(100% - 2px)
+                    transform: rotate(45deg)
+                span::before
+                    top: calc(100% - 2px)
+                    transform: rotate(-45deg)
+        .menu-wrapper
+            display: block
+                    
+.nav-top
+    padding-top: 40px
+    
+    .brand
+        img
+            height: 40px
+            width: auto
+.nav-bot
+    padding: 20px 0
+    .nav-wrapper
+        display: flex
+        align-items: center
+        justify-content: flex-end
+    .login
+        position: relative
+        padding-left: 30px
+        margin-left: 30px
+        display: flex
+        align-items: center
+        &::before
+            +psuedo
+            +transition-default
+            height: 30px
+            width: 2px
+            background: $primary
+            +absolute('center','left')
+    .nav-link
+        font-size: 16px
+        font-weight: 500
+        color: $primary
+        padding: 10px 20px
+        position: relative
+        &::before
+            +psuedo
+            width: 0
+            +transition-default
+            height: 2px
+            background: $primary
+            +absolute('top','center')
+        &.active,&:hover
+            &::before
+                width: 30px
+        &.text-orange
+            &::before
+                background: $orange
+.menu-btn
+    display: flex
+    align-items: center
+    color: white
+    font-weight: normal
+    font-size: 16px
+    font-weight: 600
+    span,span::before,span::after
+        display: inline-block
+        width: 24px
+        height: 2px
+        background: white
+        box-shadow: 0 0 1px white
+        border-radius: 2px
+        +transition-default
+    span
+        position: relative
+        margin-right: 10px
+        &::before,&::after
+            content: ''
+            position: absolute
+        &::before
+            left: 0
+            top: calc(100% + 5px)
+        &::after
+            left: 0
+            bottom: calc(100% + 5px)
+.lang-select
+    position: relative
+    ul
+        display: none
+        position: absolute
+        right: 0
+        width: auto
+        top: calc( 100% + 10px )
+        background: #fff
+        border-radius: 20px
+        box-shadow: $shadow-default
+        &.active
+            display: block
+        li
+            padding: 10px 20px
+            font-size: 12px
+            font-weight: 500
+            display: flex
+            align-items: center
+            border-bottom: 1px solid $border_color
+            img
+                margin-right: 6px
+
+.menu-wrapper
+    background: white
+    +py(30px)
+    +container
+    display: none
+    .menu-list
+        min-height: 275px
+        border-left: 2px solid $primary
+        padding-left: 30px
+        display: inline-flex
+        flex-direction: column
+        justify-content: center
+        min-width: 180px
+        position: relative
+    .menu-item
+        .menu-link
+            display: inline-block
+            font-size: 16px
+            font-weight: 600
+            +py(7px)
+            color: $primary
+        &:hover
+            .menu-link
+                position: relative
+                +addArrow(8px,$primary,'right')
+            .menu-detail
+                display: flex
+                position: absolute
+                right: 0
+                top: 50%
+                transform: translateY(-50%) translateX(100%)
+    .menu-detail
+        display: none
+        .img-wrapper
+            line-height: 0
+            border-radius: 20px
+            overflow: hidden
+            flex: 0 0 auto
+            margin-right: 25px
+        .content-wrapper
+            flex: 0 0 210px
+            border-bottom: 2px solid $primary
+            +my(20px)
+            p
+                font-size: 16px
+                color: #8B8B8B
+                line-height: 1.75
+
+
+footer
+    background: #EFF8FF
+    .footer-top
+        padding-top: 160px
+        padding-bottom: 80px
+        +respond-to-down(small)
+            padding: 40px 0
+    .footer-bot
+        +py(15px)
+        color: #506270
+        border-top: 1px solid rgba(#000,.1 )
+    .nav-item
+        padding: 10px 20px 
+        +respond-to-down(small)
+            padding-left: 0
+    .nav-link
+        font-size: 16px
+        font-weight: 500
+        color: #15354B
+        position: relative
+        display: inline-block
+        &::before
+            +psuedo
+            width: 0
+            +transition-default
+            height: 2px
+            background:  #15354B
+            +absolute('top','left')
+        &.active,&:hover
+            &::before
+                width: 30px
+
+.nav-list
+    &.nav-horizontal
+        display: flex
+    .nav-item
+        .nav-link
+            display: inline-block

@@ -1,0 +1,40 @@
+@each $color,$value in $theme-colors
+    .text-#{$color}
+        color : $value !important
+
+
+
+h1
+    font-size: 40px
+h2
+    font-size: 35px
+h3
+    font-size: 30px
+h4
+    font-size: 25px
+h5
+    font-size: 20px
+h6
+    font-size: 18px
+.heading-1
+    font-size: 40px
+.heading-5
+    font-size: 20px
+    line-height: 1.6
+.text-sm
+    font-size: 12px
+.text-muted
+    opacity: .55
+
+@for $var from 2 through 4
+    .line-#{$var}     
+        display: -webkit-box
+        -webkit-line-clamp: $var
+        -webkit-box-orient: vertical;
+        overflow: hidden
+
+@for $weight from 4 through 7
+    $w : $weight*100
+    .fw-#{$w}
+        font-weight: $w
+     

@@ -1,0 +1,177 @@
+@use 'sass:math'
+=respond-to($breakpoint)
+    @if $breakpoint==x-small
+        @media(min-width:576px)
+            @content
+    @else if $breakpoint==small
+        @media(min-width:768px)
+            @content
+    @else if $breakpoint==medium
+        @media(min-width:992px)
+            @content
+    @else if $breakpoint==large
+        @media(min-width:1200px)
+            @content
+    @else if $breakpoint==x-large
+        @media(min-width:1260px)
+            @content
+    @else
+        @media (min-width:$breakpoint)
+            @content
+
+=respond-to-down($breakpoint)
+    @if $breakpoint==x-small
+        @media(max-width:575px)
+            @content
+    @else if $breakpoint==small
+        @media(max-width:767px)
+            @content
+    @else if $breakpoint==medium
+        @media(max-width:991px)
+            @content
+    @else if $breakpoint==large
+        @media(max-width:1200px)
+            @content
+    @else if $breakpoint==x-large
+        @media(max-width:1260px)
+            @content
+=mx($mx)
+    margin-left: $mx
+    margin-right: $mx
+=my($my)
+    margin-top: $my
+    margin-bottom: $my
+=px($px)
+    padding-left: $px
+    padding-right: $px
+=py($py)
+    padding-top: $py
+    padding-bottom: $py
+=size($size)
+    width: $size
+    height: $size
+=container
+    width: 100%
+    max-width: 1200px
+    margin: auto
+    +px($gap/2)
+
+=transition-default
+    transition : all .15s ease
+=transition-slow
+    transition : all .5s ease
+
+=psuedo
+    content: ''
+    display : inline-block
+
+
+=border($positions,$width,$color)
+    @each $pos in $positions
+        border-#{$pos}: $width solid $color
+
+
+=flex-align($x,$y,$flex: flex)
+    display: $flex
+    align-items: #{$x}
+    justify-content: #{$y}
+
+    
+=rightLine($space,$height,$color)
+    position : relative
+    &:not(:last-child)
+        margin-right : $space
+        padding-right : $space
+        &::after
+            +psuedo
+            width : 1px
+            height : $height
+            background : $color
+            position : absolute
+            right : 0
+            top : 50%
+            transform: translateY(-50%)
+
+=aspect-center
+    position: absolute
+    @each $a,$b in $positions
+        #{$b}: -50%
+    margin: auto
+    height: 100%
+=absolute($x,$y)
+    position: absolute
+    $translateX: 0
+    $translateY: 0
+    @if $x == 'top'
+        top: 0
+    @if $x == 'center'
+        top: 50%
+        $translateY: -50%
+    @if $x == 'bottom'
+        bottom: 0
+    @if $y == 'left'
+        left: 0
+    @if $y == 'center'
+        left: 50%
+        $translateX: -50%
+    @if $y == 'right'
+        right: 0
+    transform: translateX($translateX) translateY($translateY)
+
+=circle($size,$color : white)
+    display : inline-block
+    +size($size)
+    border-radius : $size
+    background : $color
+    position : relative
+
+=addPlus($height,$width,$color)
+    position : relative
+    &::after,&::before
+        +psuedo
+        width : $width
+        height : $height
+        background : $color
+        position : absolute
+        left : 50%
+        top : 50%
+        transform : translate(-50%,-50%)
+    &::before
+        transform : translate(-50%,-50%) rotate(90deg)
+=addCross($height,$width,$color)
+    position : relative
+    &::after,&::before
+        +psuedo
+        width : $width
+        height : $height
+        background : $color
+        position : absolute
+        left : 50%
+        top : 50%
+        transform : translate(-50%,-50%) rotate(-45deg)
+    &::before
+        transform : translate(-50%,-50%) rotate(45deg)
+
+=addArrow($size,$color,$direction)
+    position : relative
+    padding-right: 30px
+    &::after
+        +psuedo
+        width : $size
+        height : $size
+        top : 50%
+        border-left : 1px solid $color
+        border-bottom : 1px solid $color
+        position : absolute
+        @if $direction == 'bottom'
+            transform: translateY(-50%) rotate(-45deg)
+        @if $direction == 'right'
+            right : 0
+            transform: translateY(-50%) rotate(-135deg)
+
+$text-align: left,right,center
+
+@each $a in $text-align
+    .text-#{$a}
+        text-align: $a
+     

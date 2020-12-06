@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="36" height="44" viewBox="0 0 36 44">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #80e0dd;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="shield-2" class="cls-1" d="M25,3,40.625,9.944A4,4,0,0,1,43,13.6V23.7A24,24,0,0,1,26.591,46.47L25,47l-1.59-.53A24,24,0,0,1,7,23.7V13.6A4,4,0,0,1,9.375,9.944Z" transform="translate(-7 -3)"/>
+</svg>
