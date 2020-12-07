@@ -1,104 +1,228 @@
-<nav class="nav">
-        <div class="nav-top">
-            <div class="container">
-                <div class="row">
-                    <div class="col">
-                        <a href="/html/main.html" class="brand">
-                            <img src="/images/logo-white.png" alt="" class="logo-white">
-                            <img src="/images/logo-green.png" alt="" class="logо">
-                        </a>
-                    </div>
-                    <div class="col text-right">
-                        <div class="lang-select">
-                            <button class="btn btn-sm btn-select text-orange">
+<nav class="nav" id="nav">
+    <div class="nav-top">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <a href="/html/main.html" class="brand">
+                        <img src="/images/logo-white.png" alt="" class="logo-white">
+                        <img src="/images/logo-green.png" alt="" class="logо">
+                    </a>
+                </div>
+                <div class="col text-right">
+                    <div class="lang-select">
+                        <button class="btn btn-sm btn-select text-orange">
+                            <img src="/images/flag-eng.svg" alt="">
+                            <span>ENGLISH</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" viewBox="0 0 12.111 6.106">
+                                <path fill="currentColor"
+                                    d="M123.719,5.723,118.49.137a.418.418,0,0,0-.62,0,.493.493,0,0,0,0,.664l4.918,5.254-4.918,5.254a.493.493,0,0,0,0,.664.418.418,0,0,0,.62,0l5.229-5.586a.493.493,0,0,0,0-.665Z"
+                                    transform="translate(12.111 -117.742) rotate(90)" />
+                            </svg>
+                        </button>
+                        <ul class="">
+                            <li>
                                 <img src="/images/flag-eng.svg" alt="">
-                                <span>ENGLISH</span>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="12" viewBox="0 0 12.111 6.106">
-                                    <path fill="currentColor" d="M123.719,5.723,118.49.137a.418.418,0,0,0-.62,0,.493.493,0,0,0,0,.664l4.918,5.254-4.918,5.254a.493.493,0,0,0,0,.664.418.418,0,0,0,.62,0l5.229-5.586a.493.493,0,0,0,0-.665Z" transform="translate(12.111 -117.742) rotate(90)"/>
-                                </svg>                                  
-                            </button>
-                            <ul class="">
-                                <li>
-                                    <img src="/images/flag-eng.svg" alt="">
-                                    ENGLISH
-                                </li>
-                                <li>
-                                    <img src="/images/flag-eng.svg" alt="">
-                                    ENGLISH
-                                </li>
-                                <li>
-                                    <img src="/images/flag-eng.svg" alt="">
-                                    ENGLISH
-                                </li>
-                            </ul>  
-                        </div>
+                                ENGLISH
+                            </li>
+                            <li>
+                                <img src="/images/flag-eng.svg" alt="">
+                                ENGLISH
+                            </li>
+                            <li>
+                                <img src="/images/flag-eng.svg" alt="">
+                                ENGLISH
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="nav-bot">
-            <div class="container">
-                <div class="row align-center">
-                    <div class="col-auto">
-                        <a href="" class="menu-btn">
-                            <span></span>
-                            Menu
-                        </a>
-                    </div>
-                    <div class="col">
-                        <div class="nav-wrapper">
-                            <div class="nav-list">
+    </div>
+    <div class="nav-bot">
+        <div class="container">
+            <div class="row align-center">
+                <div class="col-auto">
+                    <a href="" class="menu-btn" onclick="toggleMenu()">
+                        <span></span>
+                        Menu
+                    </a>
+                </div>
+                <div class="col">
+                    <div class="nav-wrapper">
+                        <ul class="nav-list nav-horizontal d-none d-md-flex">
+                            <li class="nav-item">
                                 <a href="" class="nav-link">Бидний тухай</a>
+                            </li>
+                            <li class="nav-item">
                                 <a href="" class="nav-link">Хичээл үзэх</a>
+                            </li>
+                            <li class="nav-item">
                                 <a href="" class="nav-link">Багш нар</a>
-                            </div>
-                            <div class="login">
-                                <a href="" class="nav-link text-orange">Нэвтрэх</a>
-                                <a href="" class="btn btn-orange ml-6">Бүртгүүлэх</a>
-                            </div>
-                        </div>
+                            </li>
+                        </ul>
+                        <!-- <div class="login">
+                            <a href="" class="nav-link text-orange">Нэвтрэх</a>
+                            <a href="" class="btn btn-orange ml-6">Бүртгүүлэх</a>
+                        </div> -->
+                        <ul class="nav-list nav-horizontal login">
+                            <li class="nav-item dropdown d-none d-md-block">
+                                <a href="" class="nav-link text-orange" data-toggle="dropdown"
+                                    data-target="#myClass">Миний хичээлүүд</a>
+                                <div class="dropdown-menu" id="myClass">
+                                    <div class="dropdown-header">
+                                        Сүүлд үзсэн хичээлүүд
+                                    </div>
+                                    <div class="dropdown-body">
+                                        <ul class="dropdown-list" id="dropWrap">
+                                            <li class="dropdown-item" id="dropItem">
+                                                <div class="img-wrap">
+                                                    <img src="/images/Screenshot-2020-04-15-at-16.19.55-b29c.jpg"
+                                                        alt="">
+                                                </div>
+                                                <div class="content-wrap">
+                                                    <h6>
+                                                        <a href="">
+                                                            “JUMP” солонгос хэлний
+                                                            сургалтын төвийн захирал
+                                                            Нэг мөр байж болно
+                                                        </a>
+                                                    </h6>
+                                                    <progress value="32" max="100"> </progress>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="dropdown-footer">
+                                        <a href="">Бүх хичээл харах</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown mr-2">
+                                <a href="" class="btn-icon notify" data-toggle="dropdown" data-target="#notify">
+                                    <i class="ic ic-bell gr-blue"></i>
+                                </a>
+                                <div class="dropdown-menu dropdown-sm" id="notify">
+                                    <div class="dropdown-header">
+                                        Сануулга
+                                    </div>
+                                    <div class="dropdown-body">
+                                        <ul class="dropdown-list" id="dropWrap2">
+                                            <li class="dropdown-item new" id="dropItem2">
+                                                <div class="img-wrap">
+                                                    <img src="/images/Screenshot-2020-04-15-at-16.19.55-b29c.jpg"
+                                                        alt="">
+                                                </div>
+                                                <div class="content-wrap">
+                                                    <h6>
+                                                        <a href="">
+                                                            “JUMP” солонгос хэлний
+                                                            сургалтын төвийн захирал
+                                                            Нэг мөр байж болно
+                                                        </a>
+                                                    </h6>
+                                                    <p class="text-muted">11 цагийн өмнө</p>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="dropdown-footer">
+                                        <a href="">Бүх хичээл харах</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="" class="btn-icon notify" data-toggle="dropdown" data-target="#myProfile">
+                                    <span class="avatar">
+                                        <img src="/images/avatar.jpg" alt="">
+                                    </span>
+                                </a>
+                                <div class="dropdown-menu" id="myProfile">
+                                    <div class="dropdown-header">
+                                        <div class="flex align-center">
+                                            <span class="avatar avatar-lg mr-2">
+                                                <img src="/images/avatar.jpg" alt="">
+                                            </span>
+                                            <div>
+                                                <h4 class="mb-1">
+                                                    Баатарбаяр <br>Оюун-эрдэнэ
+                                                </h4>
+                                                <p class="text-muted text-sm">
+                                                    24-р сургуулийн 8б ангийн сурагч
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown-body">
+                                        <ul class="profile-list">
+                                            <li class="profile-item" >
+                                                <a href="">Миний хичээлүүд <i class="icon-settings-1"></i></a>
+                                                <a href="">Таалагдсан хичээлүүд <i class="icon-settings-1"></i></a>
+                                                <a href="">Сануулгууд <i class="icon-settings-1"></i></a>
+                                            </li>
+                                            <li class="profile-item" >
+                                                <a href="">Хэрэглэгчийн тухай <i class="icon-settings-1"></i></a>
+                                                <a href="">Төлбөр төлөх <i class="icon-settings-1"></i></a>
+                                                <a href="">Төлбөрийн түүх <i class="icon-settings-1"></i></a>
+                                                <a href="">График үзүүлэлэт <i class="icon-settings-1"></i></a>
+                                            </li>
+                                            <li class="profile-item" >
+                                                <a href="">Тусламж <i class="icon-settings-1"></i></a>
+                                                <a href="">Гарах <i class="icon-settings-1"></i></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="dropdown-footer">
+                                        <a href="">Бүх хичээл харах</a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
-            <div class="menu-wrapper">
-                <ul class="menu-list">
-                    <li class="menu-item">
-                        <a href="" class="menu-link">Menu1</a>
-                        <a class="menu-detail">
-                            <div class="img-wrapper">
-                                <img src="/images/Screenshot-2020-04-15-at-16.19.55-b29c.jpg" alt="">
-                            </div>
-                            <div class="content-wrapper">
-                                <p>
-                                    Contact us via Email or Phone 
-                                    with your Tutoring needs and
-                                    we match the most suitably
-                                    qualifed tutors for a Free 30
-                                    Mins demo...
-                                </p>
-                                <ul class="star-wrap mt-4">
-                                    <li class="star active"></li>
-                                    <li class="star active"></li>
-                                    <li class="star active"></li>
-                                    <li class="star active"></li>
-                                    <li class="star"></li>
-                                </ul>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="" class="menu-link">Menu1</a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="" class="menu-link">Menu1</a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="" class="menu-link">Menu1</a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="" class="menu-link">Menu1</a>
-                    </li>
-                </ul>
-            </div>
         </div>
+        <div class="menu-wrapper">
+            <ul class="menu-list">
+                <li class="menu-item">
+                    <a href="" class="menu-link">ЭЕШ</a>
+                    <a class="menu-detail" href="/html/list.html">
+                        <div class="img-wrapper">
+                            <img src="/images/Screenshot-2020-04-15-at-16.19.55-b29c.jpg" alt="">
+                        </div>
+                        <div class="content-wrapper">
+                            <p>
+                                Contact us via Email or Phone
+                                with your Tutoring needs and
+                                we match the most suitably
+                                qualifed tutors for a Free 30
+                                Mins demo...
+                            </p>
+                            <ul class="star-wrap mt-4">
+                                <li class="star active"></li>
+                                <li class="star active"></li>
+                                <li class="star active"></li>
+                                <li class="star active"></li>
+                                <li class="star"></li>
+                            </ul>
+                        </div>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="" class="menu-link">Эврика</a>
+                </li>
+                <li class="menu-item">
+                    <a href="" class="menu-link">Гадаад хэл</a>
+                </li>
+                <li class="menu-item">
+                    <a href="" class="menu-link">Ахлах анги</a>
+                </li>
+                <li class="menu-item">
+                    <a href="" class="menu-link">Дунд анги</a>
+                </li>
+                <li class="menu-item">
+                    <a href="" class="menu-link">Теле</a>
+                </li>
+            </ul>
+        </div>
+    </div>
 </nav>

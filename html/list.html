@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+</head>
+
+<body style="">
+    <header>
+        
+    </header>
+    <main style="margin: 200px 0;">
+        <div class="container">
+            <div class="row" id="wrap">
+                <div class="col-sm-12">
+                    <div class="flex align-center my-4">
+                        <h5>Шинэ хичээлүүд</h5>
+                        <div class="slide-controller ml-auto">
+                            <a href="" class="slide-prev">
+                                
+                            </a>
+                            <div class="dots-wrapper">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <a href="" class="slide-next"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4" id="bigCard">
+                    <div class="card shadow-default card-vertical">
+                        <div class="img-wrapper">
+                            <img class="img" src="/images/Screenshot-2020-04-15-at-16.19.55-b29c.jpg" alt="">
+                        </div>
+                        <div class="content-wrapper">
+                            <div class="avatar fixed">
+                                <img src="/images/avatar.jpg" alt="">
+                            </div>
+                            <p class="fw-600 line-2 mb-4">
+                                <a href="">
+                                    Хичээлийн ног энд байрлана хоёр
+                                    мөр Dайж болно түүнээс дээр …
+                                </a>
+                            </p>
+                            <div class="flex justify-between">
+                                <ul class="star-wrap">
+                                    <li class="star active"></li>
+                                    <li class="star active"></li>
+                                    <li class="star active"></li>
+                                    <li class="star active"></li>
+                                    <li class="star"></li>
+                                </ul>
+                                <small class="date text-sm text-muted">2цаг 30минут</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex align-center my-4">
+                <h5>Үнэгүй танилцуулах хичээлүүд</h5>
+                <div class="slide-controller ml-auto">
+                    <a href="" class="slide-prev">
+                        
+                    </a>
+                    <div class="dots-wrapper">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <a href="" class="slide-next"></a>
+                </div>
+            </div>
+
+            <div class="row narrow" id="wrap2">
+                <div class="col-sm-6 col-md-4" id="smolCard">
+                    <div class="card card-sm">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="img-wrapper shadow-blue">
+                                    <img class="img" src="/images/card-img.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="content-wrapper">
+                                    <h5 class="fw-600 text-blue line-3 text-sm">
+                                        <a href="">
+                                            Хичээлийн ног энд байрлана хоёр
+                                            мөр Dайж болно түүнээс дээр …
+                                        </a>
+                                    </h5>
+                                    <div class="flex align-center my-2">
+                                        <div class="avatar mr-3">
+                                            <img src="/images/avatar.jpg" alt="">
+                                        </div>
+                                        <p class="text-sm text-muted" style="line-height: 1;">Dorjsuren 24-r surguuli
+                                            bagsh</p>
+                                    </div>
+                                    <div class="flex justify-between align-center text-sm">
+                                        <ul class="star-wrap star-sm">
+                                            <li class="star active"></li>
+                                            <li class="star active"></li>
+                                            <li class="star active"></li>
+                                            <li class="star active"></li>
+                                            <li class="star"></li>
+                                        </ul>
+                                        <small class="date text-muted fw-700">2цаг 30минут</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="flex align-center my-4">
+                <h5>Багц хичээлүүд</h5>
+            </div>
+
+            <div class="row" id="wrap3">
+                <div class="col-sm-4 col-md-3" id="card-list">
+                    <div class="card shadow-default card-vertical">
+                        <div class="img-wrapper">
+                            <img class="img" src="/images/Screenshot-2020-04-15-at-16.19.55-b29c.jpg" alt="">
+                        </div>
+                        <div class="content-wrapper p-4">
+                            <p class="fw-600 line-2 text-sm">
+                                <a href="">
+                                    Хичээлийн ног энд байрлана хоёр
+                                    мөр Dайж болно түүнээс дээр …
+                                </a>
+                            </p>
+                            <div class="flex align-center  my-4">
+                                <div class="avatar mr-2">
+                                    <img src="/images/avatar.jpg" alt="">
+                                </div>
+                                <p class="text-sm text-muted" style="line-height: 1;">Dorjsuren 24-r surguuli
+                                    bagsh</p>
+                            </div>
+                            <div class="flex justify-between text-sm">
+                                <ul class="star-wrap">
+                                    <li class="star active"></li>
+                                    <li class="star active"></li>
+                                    <li class="star active"></li>
+                                    <li class="star active"></li>
+                                    <li class="star"></li>
+                                </ul>
+                                <small class="date fw-700 text-muted">2цаг 30минут</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+    <footer>
+       
+    </footer>
+</body>
+
+<script src="/js/common.js"></script>
+<script>
+    duplicate('wrap', 'bigCard', 2)
+    duplicate('wrap2', 'smolCard', 2)
+    duplicate('wrap3', 'card-list', 15)
+    
+
+
+    function duplicate(a, b, c) {
+        var object = document.getElementById(a);
+        var target = document.getElementById(b);
+        for (let i = 0; i < c; i++) {
+            var cln = target.cloneNode(true);
+            object.appendChild(cln);
+        }
+    }
+
+    function toggleMenu() {
+        event.preventDefault();
+        nav.classList.toggle('open')
+    }
+    
+</script>
+
+</html>

@@ -5,7 +5,13 @@
     display : flex
     flex-wrap : wrap
     +mx(-$gap/2)
-    
+    &.narrow
+        +mx(-8px)
+        .row
+            +mx(-8px)
+        [class^="col-"]
+            +px(8px)
+
 [class^="col-"]
     position: relative
     width: 100%
@@ -24,14 +30,33 @@
     flex-grow: 1
     max-width: 100%
     
-$col_size: 'sm' small,'md' medium,'lg' large
 
+$display-list: block,inline-block,none,flex,inline-flex
+$col_size: 'sm' small,'md' medium,'lg' large
+@each $dis in $display-list
+    .d-#{$dis}
+        display: $dis !important
+        
+@for $b from 10 to 0
+    .order-#{$b}
+        order: $b         
+        
 @each $size,$breakpoint in $col_size
     @for $i from 12 to 0
         +respond-to($breakpoint)
             .col-#{$size}-#{$i}
                 flex : 0 0 (100%/12 * $i)
                 max-width : 100%/12 * $i
+    
+    @each $dis in $display-list
+        +respond-to($breakpoint)
+            .d-#{$size}-#{$dis}
+                display: $dis !important
+
+    @for $b from 10 to 0
+        +respond-to($breakpoint)
+            .order-#{$size}-#{$b}
+                order: $b         
 
 @for $i from 12 to 0
     .col-#{$i}

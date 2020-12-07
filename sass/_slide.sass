@@ -1,0 +1,40 @@
+.slide-controller
+    display: flex
+    align-items: center
+    .slide-prev,.slide-next
+        +circle(45px)
+        border: 1px solid rgba(black,.2)
+        position: relative
+        +transition-default
+        &::after
+            +psuedo
+            +transition-default
+            width: 10px
+            height: 21px
+            background: url(/images/slide_arrow.svg) no-repeat center
+            opacity: .4
+            position: absolute
+            +absolute(center,center)
+        &:hover,&.active
+            border: 1px solid rgba(black,.3)
+            &::after
+                opacity: 1
+    .slide-prev
+        &::after
+            transform: translate(-50%,-50%) rotate(180deg)
+.dots-wrapper
+    margin: 5px
+    display: flex
+    span
+        display: inline-block
+        +size(20px)
+        position: relative
+        cursor: pointer
+        &::after
+            +circle(10px,#D0D0D0)
+            +psuedo
+            +absolute(center,center)
+            +transition-default
+        &.active,&:hover
+            &::after
+                background: $orange

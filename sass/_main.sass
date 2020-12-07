@@ -3,6 +3,7 @@
     height: 100vh
     +flex-align('center','flex-end')
     position: relative
+    overflow-x: hidden
     p
         opacity: .56
     .scroll-down
@@ -15,6 +16,86 @@
             animation-duration: 1.5s
             animation: bounce 3.6s ease infinite
             transform-origin: 50% 50%
+    .background
+        position: absolute
+        top: 0
+        bottom: 0
+        width: 100%
+        display: grid
+        grid-template-rows: 165px auto 100px
+        grid-template-columns:  minmax(15px,auto) minmax(auto,600px) minmax(auto,600px) minmax(15px,auto)
+        +respond-to-down(large)
+            grid-template-rows: 130px auto 100px
+        +respond-to-down(medium)
+            grid-template-rows: 120px 500px 500px
+            grid-template-columns: 30px 1fr 1fr 30px
+        +respond-to-down(small)
+            grid-template-rows: 120px 1fr
+        .content
+            grid-row: 2
+            grid-column: 3
+            text-align: right
+            display: flex
+            flex-direction: column
+            justify-content: center
+            position: relative
+            z-index: 2
+            +respond-to-down(medium)
+                text-align: center
+                grid-row: 2
+                grid-column: 2 / span 2
+        .col3
+            grid-row: 1 
+            grid-column: 1 /span 2
+            position: relative
+            +respond-to-down(small)
+
+            img
+                max-width: 550px
+                width: 100%
+                position: absolute
+                right: 20%
+                bottom: -80%
+                +respond-to-down(large)
+                    right: 40%
+                +respond-to-down(medium)
+                    right: 20%
+                +respond-to-down(small)
+                    right: 0
+                    bottom: 0
+                    width: 400px
+                    transform: translate(10%, 20%)
+        .col2
+            grid-row: 2 
+            grid-column: 4
+            position: relative
+            +respond-to-down(medium)
+
+            img
+                height: 100%
+                position: absolute
+                left: 0
+        .col1
+            grid-row: 2 
+            grid-column: 1 / span 2
+            position: relative
+            +respond-to-down(medium)
+                grid-row: 3 
+                grid-column: 2 / span 2
+            +respond-to-down(small)
+                display: none
+            .shape1
+                position: absolute
+                z-index: 1
+                top: 50%
+                left: 50%
+                transform: translate(-50%,-50%)
+                max-width: 100%
+                +respond-to-down(large)
+                    max-width: 120%
+                +respond-to-down(medium)
+                    max-width: 100%
+                    height: 100%
 .section-about
     .row
         &:not(:last-child)

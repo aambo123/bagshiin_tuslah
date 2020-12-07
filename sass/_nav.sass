@@ -11,20 +11,18 @@
             display: block
     &.colored
         background: linear-gradient(90deg, #42826A 0%, #EF7F65 100%)
+        padding-bottom: 1px
         .nav-top,.nav-bot
             background: white
-        .nav-bot
-            margin-bottom: 1px
         img
             &.logо
                 display: block
             &.logo-white
                 display: none
-        .nav-bot
-            .menu-btn
-                color: $primary
-                span,span::before,span::after
-                    background: $primary
+        .menu-btn
+            color: $primary
+            span,span::before,span::after
+                background: $primary
     &.open
         background: linear-gradient(90deg, #42826A 0%, #EF7F65 100%)
         .nav-top,.nav-bot
@@ -36,32 +34,34 @@
                 display: block
             &.logo-white
                 display: none
-        .nav-bot
-            .menu-btn
-                color: $primary
-                span,span::before,span::after
-                    background: $primary
-                span
-                    background: transparent
-                    box-shadow: none
-                span::after
-                    bottom: calc(100% - 2px)
-                    transform: rotate(45deg)
-                span::before
-                    top: calc(100% - 2px)
-                    transform: rotate(-45deg)
+        .menu-btn
+            color: $primary
+            span,span::before,span::after
+                background: $primary
+            span
+                background: transparent !important
+                box-shadow: none
+            span::after
+                bottom: calc(100% - 2px)
+                transform: rotate(45deg)
+            span::before
+                top: calc(100% - 2px)
+                transform: rotate(-45deg)
         .menu-wrapper
             display: block
                     
 .nav-top
     padding-top: 40px
-    
+    +respond-to-down(medium)
+        padding: 10px 0
     .brand
         img
             height: 40px
             width: auto
 .nav-bot
     padding: 20px 0
+    +respond-to-down(medium)
+        padding: 10px 0
     .nav-wrapper
         display: flex
         align-items: center
@@ -79,6 +79,8 @@
             width: 2px
             background: $primary
             +absolute('center','left')
+            +respond-to-down(medium)
+                content: none
     .nav-link
         font-size: 16px
         font-weight: 500
@@ -99,7 +101,7 @@
             &::before
                 background: $orange
 .menu-btn
-    display: flex
+    display: inline-flex
     align-items: center
     color: white
     font-weight: normal
@@ -153,6 +155,8 @@
     +py(30px)
     +container
     display: none
+    +respond-to-down(small)
+        +py(15px)
     .menu-list
         min-height: 275px
         border-left: 2px solid $primary
@@ -162,6 +166,11 @@
         justify-content: center
         min-width: 180px
         position: relative
+        +respond-to-down(small)
+            padding-left: 15px
+            min-height: 200px
+            width: 100%
+            padding-right: 15px
     .menu-item
         .menu-link
             display: inline-block
@@ -169,28 +178,43 @@
             font-weight: 600
             +py(7px)
             color: $primary
+            +respond-to-down(small)
+                display: block
         &:hover
             .menu-link
                 position: relative
                 +addArrow(8px,$primary,'right')
             .menu-detail
                 display: flex
-                position: absolute
-                right: 0
-                top: 50%
-                transform: translateY(-50%) translateX(100%)
+                +respond-to(small)
+                    position: absolute
+                    right: 0
+                    top: 50%
+                    transform: translateY(-50%) translateX(100%)
+                +respond-to-down(small)
+                    position: static
+
     .menu-detail
         display: none
+        +respond-to-down(small)
+            flex-direction: column
         .img-wrapper
             line-height: 0
             border-radius: 20px
             overflow: hidden
             flex: 0 0 auto
             margin-right: 25px
+            +respond-to-down(small)
+                margin-right: 0
+        img
+            max-width: 100%
         .content-wrapper
             flex: 0 0 210px
             border-bottom: 2px solid $primary
             +my(20px)
+            +respond-to-down(small)
+                flex: auto
+                padding-bottom: 20px
             p
                 font-size: 16px
                 color: #8B8B8B

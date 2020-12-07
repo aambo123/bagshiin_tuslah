@@ -1,4 +1,4 @@
-@for $var from 1 through 10
+@for $var from 0 through 10
     $size: 5*$var+px
     .w-#{$var*10}
         width: $var*10%
@@ -21,8 +21,6 @@
     .px-#{$var}
         +px($size)
     .p-#{$var}
-        +px($size)
-        +py($size)
+        padding: $size !important
     .m-#{$var}
-        +mx($size)
-        +my($size)
+        margin: $size !important
