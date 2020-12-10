@@ -1493,10 +1493,12 @@ template {
   border-radius: 20px;
   -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
           box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  min-width: unset;
 }
 
-.lang-select ul.active {
+.lang-select ul.open {
   display: block;
+  z-index: 1;
 }
 
 .lang-select ul li {
@@ -1509,6 +1511,9 @@ template {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.lang-select ul li:not(:last-child) {
   border-bottom: 1px solid #E2E2E2;
 }
 
