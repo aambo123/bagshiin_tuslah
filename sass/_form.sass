@@ -52,7 +52,12 @@ input[type="radio"].custom
             transform: translateY(-50%) rotate(-45deg)
             background : $primary
             border-radius: 3rem
-
+.form-group
+    margin-bottom: 1.5rem
+.form-label
+    font-size: .875rem
+    font-weight: 600
+    margin-bottom: 10px
 .input-group
     position: relative
     display: flex
@@ -68,6 +73,12 @@ input[type="radio"].custom
     @each $color,$left,$right in $button-gradient
         &.#{$color}
             border: 1px solid $right
+            color: $right
+    .input-group-prepend
+        display: flex
+        padding: 14px
+        &+input
+            padding-left: 0
 .form-control
     border: 1px solid $border_color
     display: inline-block

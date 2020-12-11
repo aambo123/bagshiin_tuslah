@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+</head>
+
+<body style="">
+    <header>
+        
+    </header>
+    <div class="login-wrapper">
+        <form action="" class="login-box">
+                    <div class="img-wrapper">
+                        <img src="/images/login_area.svg" alt="">
+                    </div>
+                    <div class="content-wrapper">
+                        <h1 class="text-center my-8">Нэвтрэх</h1>
+                        <div class="form-group">
+                            <label for="" class="form-label">И-мэйл/Утасны дугаар</label>
+                            <div class="input-group blue">
+                                <div class="input-group-prepend">
+                                    <i class="icon-user"></i>
+                                </div>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="form-label">Нууц үг</label>
+                            <div class="input-group blue">
+                                <div class="input-group-prepend">
+                                    <i class="icon-lock"></i>
+                                </div>
+                                <input type="password" class="form-control">
+                            </div>
+                        </div>
+                        <div class="flex align-center justify-between">
+                            <a href="" class=" btn-link">
+                                Нууц үг сэргээх
+                            </a>
+                            <a href="" class="btn btn-orange">
+                                Нэвтрэх
+                            </a>
+                        </div>
+                        <div class="or"><span>эсвэл</span></div>
+                        <div class="social-login">
+                            <a href="" class="btn btn-google btn-social">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path fill="currentColor" d="m21.823 9h-2.187v2.177h-2.177v2.187h2.177v2.177h2.187v-2.177h2.177v-2.187h-2.177z"/>
+                                <path fill="currentColor" d="m7.5 19.5c4.328 0 7.203-3.038 7.203-7.326 0-.491-.051-.87-.122-1.248h-7.08v2.578h4.257c-.174 1.095-1.289 3.233-4.257 3.233-2.557 0-4.645-2.118-4.645-4.737s2.087-4.738 4.645-4.738c1.463 0 2.435.624 2.988 1.156l2.036-1.954c-1.311-1.227-2.999-1.964-5.025-1.964-4.144 0-7.5 3.356-7.5 7.5s3.356 7.5 7.5 7.5z"/>
+                                </svg>
+                                Google-ээр нэвтрэх
+                            </a>
+                            <a href="" class="btn btn-facebook btn-social">
+                                <svg  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill="currentColor" d="m15.997 3.985h2.191v-3.816c-.378-.052-1.678-.169-3.192-.169-3.159 0-5.323 1.987-5.323 5.639v3.361h-3.486v4.266h3.486v10.734h4.274v-10.733h3.345l.531-4.266h-3.877v-2.939c.001-1.233.333-2.077 2.051-2.077z"/>
+                                </svg>
+                                Facebook-ээр нэвтрэх
+                            </a>
+                        </div>
+                    </div>        
+        </form>
+            
+    </div>
+    <footer>
+       
+    </footer>
+</body>
+<script src="/js/common.js"></script>
+<script>
+    
+
+
+    function duplicate(a, b, c) {
+        var object = document.getElementById(a);
+        var target = document.getElementById(b);
+        for (let i = 0; i < c; i++) {
+            var cln = target.cloneNode(true);
+            object.appendChild(cln);
+        }
+    }
+
+    function toggleMenu() {
+        event.preventDefault();
+        nav.classList.toggle('open')
+    }
+    
+</script>
+
+</html>

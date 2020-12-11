@@ -31,12 +31,27 @@
     .btn-link
         display: inline-flex
         align-items: center
+    &.btn-google
+        background: linear-gradient(90deg, #f77c6e 0%, #cf4332 100%);
+        color: get_color(#cf4332)
+        &:hover
+            box-shadow: 0 3px 6px #f77c6e
+    &.btn-facebook
+        background: linear-gradient(90deg, #6d91e0 0%, #3c66c4 100%);
+        color: get_color(#3c66c4)
+        &:hover
+            box-shadow: 0 3px 6px #6d91e0
 @each $color,$left,$right in $button-gradient
     &.btn-#{$color}
         background: linear-gradient(90deg, $left 0%, $right 100%);
         color: get_color($right)
         box-shadow: 0 3px 6px $right
-
+.btn-social
+    display: inline-flex
+    align-items: center
+    svg
+        +size(20px)
+        margin-right: 20px
 .btn-icon
     text-shadow: none
     text-decoration: none

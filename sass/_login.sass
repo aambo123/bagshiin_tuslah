@@ -1,0 +1,55 @@
+.login-wrapper
+    +flex-align(center,center)
+    width: 100%
+    padding-top: 165px
+    min-height: 100vh
+    .login-box
+        +flex-align(center,center)
+        +container
+        +respond-to-down(medium)
+            flex-wrap: wrap
+            max-width: 500px
+            margin-bottom: 100px
+        .img-wrapper
+            flex: 0 0 50%
+            max-width: 50%
+            +respond-to-down(medium)
+                flex: 0 0 100%
+                max-width: 100%
+            text-align: center
+            img
+                max-width: 100%
+                +respond-to-down(medium)
+        .content-wrapper
+            flex: 0 0 50%
+            max-width: 50%
+            +respond-to-down(medium)
+                flex: 0 0 100%
+                max-width: 100%
+        .or
+            font-weight: bold
+            font-size: 14px
+            +flex-align(center,space-between)
+            position: relative
+            +my(30px)
+            text-align: center
+            color: #9e9e9e
+            span
+                +mx(20px)
+            &::before,&::after
+                +psuedo
+                flex: 1
+                height: 2px
+                background: #dcdcdc
+    .social-login
+        display: flex
+        align-items: center
+        justify-content: space-between
+        +respond-to-down(medium)
+            flex-wrap: wrap
+            .btn-social
+                flex: 0 0 100%
+                max-width: 100%
+                margin-bottom: 20px
+                justify-content: center
+            
