@@ -79,3 +79,13 @@ $flex-aligns: 'center' center,'end' flex-end,'start' flex-start
      
 .flex
     display : flex
+
+
+$x-dir : 'left','center','right'
+$y-dir : 'top','center','bottom'
+
+@each $x in $x-dir
+    @each $y in $y-dir
+        .absolute-#{$y}-#{$x}
+            +absolute($y,$x)
+            position: absolute !important

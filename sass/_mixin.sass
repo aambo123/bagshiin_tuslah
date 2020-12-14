@@ -116,6 +116,9 @@
         $translateX: -50%
     @if $y == 'right'
         right: 0
+    @else
+        bottom: $x
+        right: $y
     transform: translateX($translateX) translateY($translateY)
 
 =circle($size,$color : white)

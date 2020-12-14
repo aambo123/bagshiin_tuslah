@@ -1,0 +1,88 @@
+.profile-wrapper
+    +container
+    padding: 200px 0
+    display: flex
+    flex-wrap: wrap
+    +respond-to-down(medium)
+        padding: 150px 0
+    .profile
+        flex: 0 0 33.333333%
+        max-width: 33.333333%
+        +px($gap/2)
+        +respond-to-down(medium)
+            flex: 0 0 100%
+            max-width: 100%
+.profile-header
+    border-top-right-radius: 80px
+    border-bottom-left-radius: 80px
+    background: $primary
+    +py(70px)
+    text-align: center
+    position: relative
+    color: white
+    .avatar
+        border: 10px solid white
+        +circle(100px)
+        flex: 0 0 100px
+    .img-wrapper
+        position: absolute
+        bottom: 0
+        left: 50%
+        transform: translate(-50%,50%)
+        .ic
+            width: 25px
+            height: 25px
+            border: 2px solid white
+            +transition-default
+            &:hover
+                transform: translateY(-2px)
+                box-shadow:  $shadow-default
+        .profile-badge
+            +circle(35px)
+            overflow: hidden
+            border: 2px solid white
+            img
+                width: 100%
+.profile-body
+    margin-top: 50px
+    .dropdown-list
+        +mx(-15px)
+        +respond-to-down(medium)
+            display: flex
+        +respond-to-down(small)
+            .dropdown-item
+                flex: 0 0 calc(100% - 100px)
+                max-width: calc(100% - 100px)
+.profile-link
+    margin-top: 70px
+    margin-bottom: 30px
+    font-size: 12px
+    +flex-align(stretch,space-between)
+    text-align: center
+    +respond-to-down(medium)
+        +my(30px)
+    a
+        flex: 1
+        +transition-default
+        position: relative
+        &::after
+            +transition-default
+            +psuedo
+            width: 0
+            height: 0
+            border-radius: 100%
+            +absolute(center,center)
+            z-index: -1
+            background: $orange
+        &:hover
+            color: white
+            &::after
+                +size(90px)
+
+.profile-form
+    flex: 0 0 66.666666%
+    max-width: 66.666666%
+    +px($gap/2)
+    +respond-to-down(medium)
+        flex: 0 0 100%
+        max-width: 100%

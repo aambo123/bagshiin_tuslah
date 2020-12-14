@@ -211,3 +211,9 @@ progress
         background: white
     &::-webkit-progress-value
         background: $orange
+    @each $color,$left,$right in $button-gradient
+        &.progress-#{$color}
+            border-color: $right
+            &::-webkit-progress-value
+                background: linear-gradient(90deg, $left 0%, $right 100%)
+
