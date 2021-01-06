@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+</head>
+
+<body style="">
+    <header>
+
+    </header>
+    <main class="container">
+        <div class="row view_wrapper">
+            <div class="view">
+                <div class="view_top">
+                    <h1 class="view_title">Хичээлийн гарчиг <small class="text-muted">сэдэвийн гарчиг</small></h1>
+                    <div class="flex align-center my-2">
+                        <div class="avatar mr-3">
+                            <img src="/images/avatar.jpg" alt="">
+                        </div>
+                        <a class="text-muted btn-link">Dorjsuren 24-r surguuli
+                            bagsh</a>
+                        <ul class="star-wrap ml-auto">
+                            <li class="star active"></li>
+                            <li class="star active"></li>
+                            <li class="star active"></li>
+                            <li class="star active"></li>
+                            <li class="star"></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <video controls style="width: 100%;">
+                    <source src="/video/test_video.mp4" type="video/mp4" no-control>
+                </video>
+            </div>
+            <div class="topic_wrap">
+                <div class="flex align-center py-2">
+                    <h5>Сэдвүүд</h5>
+                </div>
+                <div class="topic_list">
+                    <div class="topic ">
+                        <div class="group">
+                            <h5>хичээлийн бүлэг 1</h5>
+                            <p class="text-right">0/4 | 10min</p>
+                        </div>
+                        <div class="subject_list">
+                            <a href="" class="subject active">
+                                <span class="play-btn"></span>
+                                <p>Хичээлийн сэдэв 1</p>
+                                <span class="time">02:10</span>
+                            </a>
+                            <a href="" class="subject">
+                                <span class="play-btn"></span>
+                                <p>Хичээлийн сэдэв 2</p>
+                                <span class="time">02:10</span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+                <div class="topic_list">
+                    <div class="topic ">
+                        <div class="group">
+                            <h5>хичээлийн бүлэг 1</h5>
+                            <p class="text-right">0/4 | 10min</p>
+                        </div>
+                        <div class="subject_list">
+                            <a href="" class="subject">
+                                <span class="play-btn"></span>
+                                <p>Хичээлийн сэдэв 1</p>
+                                <span class="time">02:10</span>
+                            </a>
+                            <a href="" class="subject">
+                                <span class="play-btn"></span>
+                                <p>Хичээлийн сэдэв 2</p>
+                                <span class="time">02:10</span>
+                            </a>
+                            <a href="" class="subject">
+                                <span class="play-btn"></span>
+                                <p>Хичээлийн сэдэв 2</p>
+                                <span class="time">02:10</span>
+                            </a>
+                            <a href="" class="subject">
+                                <span class="play-btn"></span>
+                                <p>Хичээлийн сэдэв 2</p>
+                                <span class="time">02:10</span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+                
+            </div>
+        </div>
+    </main>
+    <div class="container">
+        <div class="row">
+            <div class="view">
+                <div class="row my-4 align-center">
+                    <div class="col">
+                        <div class="tab_wrapper">
+                            <a class="tab active" data-target="tab-content-1">Тайлбар</a>
+                            <a class="tab" data-target="tab-content-2">Багшааас асуух</a>
+                        </div>
+                    </div>
+                    <div class="col-auto">
+                        <a href="test.html" class="btn btn-orange ml-auto btn-sm">Бататгах тест</a>
+                    </div>
+                
+                </div>
+                
+                <div class="tab_content show" id="tab-content-1">
+                    <div class="row justify-center">
+                        <div class="col-lg-7 mx-auto">
+                            <h5 class="mb-3">Хичээлийн тайлбар</h5>
+                            <p>
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas repudiandae natus voluptatum, non, excepturi similique eius nam, quia nobis itaque odit consectetur nisi illo aut suscipit. Voluptates nobis alias cupiditate.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="tab_content" id="tab-content-2">
+                    <div class="row justify-center">
+                        <div class="col-lg-7 mx-auto">
+                            <textarea name="" class="form-control" rows="5"></textarea>
+                            <p class="text-right">
+                                <a href="" class="btn btn-green">илгээж</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+
+    </footer>
+</body>
+<script src="/js/common.js"></script>
+<script>
+
+
+
+    function duplicate(a, b, c) {
+        var object = document.getElementById(a);
+        var target = document.getElementById(b);
+        for (let i = 0; i < c; i++) {
+            var cln = target.cloneNode(true);
+            object.appendChild(cln);
+        }
+    }
+
+    function toggleMenu() {
+        event.preventDefault();
+        nav.classList.toggle('open')
+    }
+    document.addEventListener('DOMContentLoaded', function () {
+
+        [].forEach.call(document.querySelectorAll('.topic'), function (el, i) {
+            var group = el.querySelector('.group');
+            var list = el.querySelector('.subject_list');
+            console.log('list. :>> ', list.clientHeight);
+            //list.style.height = list.clientHeight + 'px';
+    
+            el.addEventListener('click', function () {
+                group.classList.toggle('hide');
+            });
+        });
+
+        [].forEach.call(document.querySelectorAll('.tab'), function (el, i) {
+            var target = el.getAttribute('data-target');
+            var tabs = document.querySelectorAll('.tab');
+            var content = document.getElementById(target);
+            var contents = document.querySelectorAll('.tab_content');
+            
+            el.addEventListener('click', function () {
+                [].forEach.call(contents, function (el, j) {
+                    contents[j].classList.remove('show')
+                });
+                [].forEach.call(tabs, function (el,k) {
+                    tabs[k].classList.remove('active')
+                });
+                el.classList.add('active');
+                content.classList.add('show');
+            });
+        });
+        
+    });
+</script>
+
+</html>

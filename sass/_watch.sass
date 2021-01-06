@@ -1,0 +1,111 @@
+.view_wrapper
+    padding-top: 200px
+    +respond-to-down(small)
+        padding-top: 140px
+.view
+    flex-basis: 0
+    flex-grow: 1
+    max-width: 100%
+    flex: 0 0 calc( 100% - 300px )
+    max-width: calc( 100% - 300px )
+    +px($gap/2)
+    +respond-to-down(medium)
+        flex: 0 0 100%
+        max-width: 100%
+.topic_wrap
+    +px($gap/2)
+    flex: 0 0 300px
+    max-width: 300px
+    display: flex
+    flex-direction: column
+    +respond-to-down(medium)
+        flex: 0 0 100%
+        max-width: 100%
+.view_title
+    small
+        display: inline-block
+    +respond-to-down(medium)
+        font-size: 24px
+.topic_list
+    .group
+        //cursor: pointer
+        padding: $gap/3 0
+        position: relative
+        // +addArrow(10px,black,'bottom')
+        h5
+            font-size: 16px
+        p
+            font-size: 13px
+        
+        &.hide
+            &::after
+                transform: translateY(-50%) rotate(135deg)
+    //         &+.subject_list
+    //             height: 0 !important
+    // .subject_list
+    //     overflow: hidden
+    //     transition: all .3s linear
+    //     position: relative
+    //     li
+    //         display: block
+.subject_list
+    .subject
+        padding: $gap/2
+        display: flex
+        align-items: center
+        border-top-right-radius: 20px
+        border-bottom-left-radius: 20px
+        +transition-default
+        &.active
+            background: $primary
+            color: #fff
+            .play-btn
+                border-color: #fff
+                background: $primary
+                &::after
+                    border-color: transparent transparent transparent #fff
+        &:not(.active):hover
+            background: #f5f5f5
+            box-shadow: $shadow-default
+
+    .play-btn
+        display: block
+        +circle(20px)
+        border: 1px solid lighten(black,34 )
+        &::after
+            +psuedo
+            width: 0
+            height: 0
+            border-style: solid
+            border-width: 4px 0 4px 8px
+            border-color: transparent transparent transparent lighten(black,34 )
+            top: 50%
+            left: 50%
+            transform: translate(-40%,-50%)
+            position: absolute
+    p
+        font-size: 14px
+        flex: 1
+        +mx($gap/2)
+    .time
+        font-size: 12px
+.tab_content
+    +my(40px)
+    display: none
+    &.show
+        display: block
+.tab_wrapper
+    display: flex
+    border-bottom: 1px solid $border_color
+    flex-basis: 0
+    flex-grow: 1
+    .tab
+        font-size: 16px
+        padding: 10px 15px
+        margin-bottom: -1px
+        font-weight: 500
+        +respond-to-down(medium)
+            font-size: 12px
+        &.active
+            border-bottom: 1px solid black
+            font-weight: 600

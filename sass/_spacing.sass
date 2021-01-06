@@ -9,8 +9,7 @@
             margin-#{$value}: $size !important
         .p#{$position}-#{$var}
             padding-#{$value}: $size !important
-        .m#{$position}-auto
-            margin-#{$value}: auto !important
+        
             
     .my-#{$var}
         +my($size)
@@ -24,3 +23,7 @@
         padding: $size !important
     .m-#{$var}
         margin: $size !important
+        
+@each $position,$value in $positions
+    .m#{$position}-auto
+        margin-#{$value}: auto !important
