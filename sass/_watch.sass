@@ -67,7 +67,6 @@
         &:not(.active):hover
             background: #f5f5f5
             box-shadow: $shadow-default
-
     .play-btn
         display: block
         +circle(20px)
@@ -109,3 +108,105 @@
         &.active
             border-bottom: 1px solid black
             font-weight: 600
+
+
+
+.question_list
+    +respond-to-down(small)
+        display: flex
+        flex-wrap: wrap
+        margin-bottom: 20px
+    .question
+        padding: $gap/3
+        display: flex
+        align-items: center
+        border-radius: 4px
+        +transition-default
+        +my(5px)
+        border: 1px solid #e8e8e8
+        +respond-to-down(small)
+            margin: 2px
+            p
+                display: none
+        p
+            font-size: 14px
+            font-weight: 600
+            margin-right: 10px
+        &.current
+            border-color: $primary
+            background: lighten($primary, 55%)
+            color: $primary
+            .number
+                background: $primary
+        .number
+            display: flex
+            width: 20px
+            height: 20px
+            align-items: center
+            justify-content: center
+            background: #ababab
+            color: white
+            font-size: 11px
+            font-weight: 500
+            border-radius: 20px
+            
+        .icon
+            margin-left: auto
+            display: none
+            +respond-to-down(small)
+                margin-left: 20px
+        &:hover
+            background: #f5f5f5
+        &.wrong
+            .icon
+                display: block
+                +circle(20px)
+                border: 2px solid #dc3545
+                &::after,&::before
+                    +psuedo
+                    width: 8px
+                    height: 2px
+                    top: 50%
+                    left: 50%
+                    background: #dc3545
+                    position: absolute
+                &::after
+                    transform: translate(-50%,-50%) rotate(-45deg)
+                &::before
+                    transform: translate(-50%,-50%) rotate(-135deg)
+        &.correct
+            .icon
+                display: block
+                +circle(20px)
+                background: #198754
+                border: 2px solid #fff
+                &::after
+                    +psuedo
+                    width: 8px
+                    height: 4px
+                    border-bottom: 2px solid #fff
+                    border-left: 2px solid #fff
+                    top: 50%
+                    left: 50%
+                    transform: translate(-50%,-50%) rotate(-45deg)
+                    position: absolute
+
+.time-wrapper
+    padding: $gap/2
+    text-align: center
+    background: $primary
+    color: #fff
+    font-size: 40px
+    font-weight: bold
+    letter-spacing: .1em
+    border-radius: 5px
+    border-top-right-radius: 20px
+    border-bottom-left-radius: 20px
+    box-shadow: $shadow-default
+    text-shadow: 0 3px 6px rgba(black,30%)
+    margin-bottom: 20px
+
+.test_wrapper
+    margin-top: 200px
+    +respond-to-down(small)
+        margin-top: 140px
