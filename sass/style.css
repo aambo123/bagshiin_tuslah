@@ -5963,7 +5963,6 @@ h6 {
 }
 
 .thumb {
-  margin-bottom: 300px !important;
   font-size: 0;
 }
 
@@ -6084,6 +6083,13 @@ h6 {
   .bg-placeholder {
     background-position: -210px -280px;
   }
+}
+
+.bg-placeholder-blue {
+  background-image: url("/images/SVG/Asset_2.svg");
+  background-size: 550px;
+  background-repeat: no-repeat;
+  background-position: calc(100% + 350px) 450px;
 }
 
 .borderless {
