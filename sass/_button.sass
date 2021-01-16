@@ -19,9 +19,12 @@
         &.active
             background: #629c78
             color: white
+        @include respond-to-down('medium')
+            padding: 10px
         @include respond-to-down('small')
             padding: 5px
             border-right: 1px solid #E2E2E2
+            margin: 0 5px 5px 0
             &:first-child
                 border-radius: 0
             &:last-child

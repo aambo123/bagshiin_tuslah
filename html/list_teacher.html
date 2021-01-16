@@ -1,31 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="bg-placeholder">
 
 <head>
     
 </head>
 
-<body style="">
-    <header>
+<body>
+    <header class="bg-placeholder">
         
     </header>
-    <section class="section-1">
+    <main style="margin: 200px 0;">
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
+                    <div class="section-header text-center header-blue">        
+                        <h1 class="heading-1">
+                            <span class="mx-5">Багш нар</span>
+                        </h1>
+                    </div>
+                </div>                
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
                     <div class="flex align-center my-4">
-                        <h5>Багш нар</h5>
                         <div class="ml-auto">
-
-                            <div class="btn-group">
-                                <div class="btn active">ЭЕШ</div>
-                                <div class="btn">Эврика</div>
-                                <div class="btn">Гадаад хэл</div>
-                                <div class="btn">Ахлах анги</div>
-                                <div class="btn">Дунд анги</div>
-                                <div class="btn">Теле</div>
+                            <div class="btn-group type_teacher">
+                                <div onclick="selectTab()" class="btn active">ЭЕШ</div>
+                                <div onclick="selectTab()" class="btn">Эврика</div>
+                                <div onclick="selectTab()" class="btn">Гадаад хэл</div>
+                                <div onclick="selectTab()" class="btn">Ахлах анги</div>
+                                <div onclick="selectTab()" class="btn">Дунд анги</div>
+                                <div onclick="selectTab()" class="btn">Теле</div>
                             </div>
-
                         </div>
                     </div>
                 </div>
@@ -77,19 +83,95 @@
                             </div>                            
                         </li>
                     </ul>
+
+                    <ul class="thumb">
+                        <li>
+                            <div class="thumb-item">
+                                <div class="img-con">
+                                    <img src="/images/teacher_1.jpg" alt="teacher_1">
+                                    <div class="info">
+                                        <p class="rank">Rank</p>
+                                        <p class="name">L.FIRSTNAME</p>
+                                        <p class="cate">Cate</p>
+                                    </div>     
+                                </div>
+                                <div class="details-con">
+                                    <p>Дэлгэрэнгүй</p>
+                                </div>                                                           
+                            </div>                                                     
+                        </li>
+
+                        <li>
+                            <div class="thumb-item">
+                                <div class="img-con">
+                                    <img src="/images/teacher_1.jpg" alt="teacher_1">
+                                    <div class="info">
+                                        <p class="rank">Rank</p>
+                                        <p class="name">L.Firstname</p>
+                                        <p class="cate">Cate</p>
+                                    </div>     
+                                </div>
+                                <div class="details-con">
+                                    <p>Дэлгэрэнгүй</p>                                                                      
+                                </div>                                                           
+                            </div>                                                     
+                        </li>
+
+                        <li>
+                            <div class="thumb-item">
+                                <div class="img-con">
+                                    <img src="/images/teacher_1.jpg" alt="teacher_1">
+                                    <div class="info">
+                                        <p class="rank">Rank</p>
+                                        <p class="name">L.Firstname</p>
+                                        <p class="cate">Cate</p>
+                                    </div>
+                                </div>
+                                <div class="details-con">
+                                    <p>Дэлгэрэнгүй</p>
+                                </div>                                                           
+                            </div>                                                     
+                        </li>
+
+                        <li>
+                            <div class="thumb-item">
+                                <div class="img-con">
+                                    <img src="/images/teacher_1.jpg" alt="teacher_1">
+                                    <div class="info">
+                                        <p class="rank">Rank</p>
+                                        <p class="name">L.Firstname</p>
+                                        <p class="cate">Cate</p>
+                                    </div>
+                                </div>
+                                <div class="details-con">
+                                    <p>Дэлгэрэнгүй</p>
+                                </div>                                                           
+                            </div>                                                     
+                        </li>
+
+                        <li>
+                            <div class="thumb-item">
+                                <div class="img-con">
+                                    <img src="/images/teacher_1.jpg" alt="teacher_1">
+                                    <div class="info">
+                                        <p class="rank">Rank</p>
+                                        <p class="name">L.Firstname</p>
+                                        <p class="cate">Cate</p>
+                                    </div>
+                                </div>
+                                <div class="details-con">
+                                    <p>Дэлгэрэнгүй</p>
+                                </div>                                                           
+                            </div>                                                     
+                        </li>
+
+                        
+                    </ul>
                 </div>
             </div>
         </div>
-        <div class="background" style="z-index: -1;">            
-            <div class="col2">
-                <img src="/images/SVG/Asset_2.svg" class="shape2" alt="">
-            </div>
-            <div class="col3">
-                <img src="/images/SVG/Asset_3.svg" class="shape3" alt="">
-            </div>
-        </div>        
-    </section>
-    
+    </main>    
+
     <footer>
        
     </footer>
@@ -114,6 +196,19 @@
         event.preventDefault();
         nav.classList.toggle('open')
     }
+    
+    function selectTab(){                                    
+        let list= document.querySelectorAll(".type_teacher .btn");                                    
+        for (let i = 0; i < list.length; i++) {
+            list[i].classList.remove("active");                                        
+        }
+        event.currentTarget.classList.add("active")
+    }
+    
+
+
+
+    
     
 </script>
 
