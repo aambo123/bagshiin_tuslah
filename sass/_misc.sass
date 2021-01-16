@@ -1,0 +1,71 @@
+.accord
+    li
+        border-top-right-radius: 10px
+        border-bottom-left-radius: 10px
+        border: 1px solid #E2E2E2
+        margin-bottom: 30px        
+        cursor: pointer
+        position: relative
+        overflow: hidden
+        h3
+            display: inline
+        .more
+            border-top-right-radius: 10px
+            border-bottom-left-radius: 10px
+            border: 1px solid transparent
+            position: absolute
+            background: #629c78
+            color: white
+            height: 100%
+            width: 100%
+            top: 0
+            left: 0
+            line-height: 70px
+            padding-left: 15px
+            color:white
+            a
+                vertical-align: middle
+        .content
+            transition: .3s
+            left: 0
+            border-top-right-radius: 10px
+            border-bottom-left-radius: 10px
+            border: 1px solid transparent
+            position: relative
+            background: white
+            padding: 15px
+            &:after
+                content: ''
+                display: inline-block               
+                width: 10px
+                height: 21px
+                background: url(/images/slide_arrow.svg) no-repeat center
+                opacity: .4
+                position: absolute
+                top: 50%
+                right: 10px
+                bottom: center
+                right: center
+                -webkit-transform: translateX(-50%) translateY(-50%)
+                transform: translateX(-50%) translateY(-50%)
+            .arrow-left
+                width: 10px
+                height: 21px
+                background: url(/images/slide_arrow.svg) no-repeat center
+        &:hover
+            .content
+                left: 150px
+        @include respond-to-down('small')
+            margin-bottom: 10px
+            .content
+                padding: 10px
+                h3
+                    font-size: 20px
+                span
+                    font-size: 20px
+            .more
+                line-height: 45px
+            
+    
+
+        

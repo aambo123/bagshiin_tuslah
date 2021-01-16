@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+</head>
+
+<body style="">
+    <header>
+        
+    </header>
+    <section class="section-1">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="flex align-center my-4">
+                        <h5>Багш нар</h5>
+                        <div class="ml-auto">
+
+                            <div class="btn-group">
+                                <div class="btn active">ЭЕШ</div>
+                                <div class="btn">Эврика</div>
+                                <div class="btn">Гадаад хэл</div>
+                                <div class="btn">Ахлах анги</div>
+                                <div class="btn">Дунд анги</div>
+                                <div class="btn">Теле</div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <ul class="accord">
+                        <li>
+                            <div class="more">
+                                <a href="/detail_teacher">Дэлгэрэнгүй</a>
+                            </div>
+                            <div class="content">
+                                <h3>Firstname</h3>
+                                <span>LASTNAME</span>                                
+                            </div>                            
+                        </li>
+                        <li>
+                            <div class="more">
+                                <a href="/detail_teacher">Дэлгэрэнгүй</a>
+                            </div>
+                            <div class="content">
+                                <h3>Firstname</h3>
+                                <span>LASTNAME</span>                                
+                            </div>                            
+                        </li>
+                        <li>
+                            <div class="more">
+                                <a href="/detail_teacher">Дэлгэрэнгүй</a>
+                            </div>
+                            <div class="content">
+                                <h3>Firstname</h3>
+                                <span>LASTNAME</span>                                
+                            </div>                            
+                        </li>
+                        <li>
+                            <div class="more">
+                                <a href="/detail_teacher">Дэлгэрэнгүй</a>
+                            </div>
+                            <div class="content">
+                                <h3>Firstname</h3>
+                                <span>LASTNAME</span>                                
+                            </div>                            
+                        </li>
+                        <li>
+                            <div class="more">
+                                <a href="/detail_teacher">Дэлгэрэнгүй</a>
+                            </div>
+                            <div class="content">
+                                <h3>Firstname</h3>
+                                <span>LASTNAME</span>                                
+                            </div>                            
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="background" style="z-index: -1;">            
+            <div class="col2">
+                <img src="/images/SVG/Asset_2.svg" class="shape2" alt="">
+            </div>
+            <div class="col3">
+                <img src="/images/SVG/Asset_3.svg" class="shape3" alt="">
+            </div>
+        </div>        
+    </section>
+    
+    <footer>
+       
+    </footer>
+</body>
+
+<script src="/js/common.js"></script>
+<script>
+    // duplicate('wrap', 'bigCard', 2)
+    // duplicate('wrap2', 'smolCard', 2)
+    // duplicate('wrap3', 'card-list', 15)
+
+    function duplicate(a, b, c) {
+        var object = document.getElementById(a);
+        var target = document.getElementById(b);
+        for (let i = 0; i < c; i++) {
+            var cln = target.cloneNode(true);
+            object.appendChild(cln);
+        }
+    }
+
+    function toggleMenu() {
+        event.preventDefault();
+        nav.classList.toggle('open')
+    }
+    
+</script>
+
+</html>
