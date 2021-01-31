@@ -4,6 +4,7 @@
     left: 0
     width: 100%
     z-index: $nav-index
+    
     img
         &.logо
             display: none   
@@ -14,6 +15,10 @@
         padding-bottom: 1px
         .nav-top,.nav-bot
             background: white
+        .nav-top
+            padding-top: 10px
+        .nav-bot
+            padding: 10px 0
         img
             &.logо
                 display: block
@@ -52,6 +57,7 @@
                     
 .nav-top
     padding-top: 40px
+    transition: padding .3s ease-in
     +respond-to-down(medium)
         padding: 10px 0
     .brand
@@ -60,6 +66,7 @@
             width: auto
 .nav-bot
     padding: 20px 0
+    transition: padding .3s ease-in
     +respond-to-down(medium)
         padding: 10px 0
     .nav-wrapper
@@ -264,3 +271,17 @@ footer
     .nav-item
         .nav-link
             display: inline-block
+
+
+.nav-search
+    margin-left: auto
+    max-width: 300px
+    padding: 3px
+    +respond-to-down(small)
+        display: none !important
+    .form-control
+        padding: 8px 16px
+        height: calc( 2em - 3px)
+    .btn-icon
+        width: 30px
+        height: 30px
